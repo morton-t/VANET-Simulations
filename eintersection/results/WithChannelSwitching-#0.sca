@@ -1,0 +1,147 @@
+version 2
+run WithChannelSwitching-0-20231103-04:34:22-99030
+attr configname WithChannelSwitching
+attr datetime 20231103-04:34:22
+attr experiment WithChannelSwitching
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network eintersection
+attr processid 99030
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.**.nic.mac1609_4.useServiceChannel true
+param *.node[*].appl.dataOnSch true
+param *.playgroundSizeX 2500m
+param *.playgroundSizeY 2500m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown false
+param *.manager.launchConfig "xmldoc(\"emergency.launchd.xml\")"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist true
+param *.**.nic.mac1609_4.txPower 20mW
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.node[*].applType "\"MyVeinsApp\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons true
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 3s
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].veinsmobility.setHostSpeed false
+param *.node[*0].veinsmobility.accidentCount 0
+param *.node[*0].veinsmobility.accidentStart 73s
+param *.node[*0].veinsmobility.accidentDuration 50s
+
+scalar eintersection.manager roiArea 0
+scalar eintersection.radioMedium.propagation "Arrival computation count" 0
+scalar eintersection.radioMedium "transmission count" 0
+scalar eintersection.radioMedium "signal send count" 0
+scalar eintersection.radioMedium "reception computation count" 0
+scalar eintersection.radioMedium "interference computation count" 0
+scalar eintersection.radioMedium "reception decision computation count" 0
+scalar eintersection.radioMedium "listening decision computation count" 0
+scalar eintersection.radioMedium "reception cache hit" -nan
+attr unit %
+scalar eintersection.radioMedium "interference cache hit" -nan
+attr unit %
+scalar eintersection.radioMedium "noise cache hit" -nan
+attr unit %
+scalar eintersection.radioMedium "snir cache hit" -nan
+attr unit %
+scalar eintersection.radioMedium "reception decision cache hit" -nan
+attr unit %
+scalar eintersection.radioMedium "reception result cache hit" -nan
+attr unit %
+scalar eintersection.node[0].appl generatedWSMs 0
+scalar eintersection.node[0].appl receivedWSMs 0
+scalar eintersection.node[0].appl generatedBSMs 6
+scalar eintersection.node[0].appl receivedBSMs 5
+scalar eintersection.node[0].appl generatedWSAs 0
+scalar eintersection.node[0].appl receivedWSAs 0
+scalar eintersection.node[0].nic.phy80211p busyTime 2.8888888888889e-05
+scalar eintersection.node[0].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar eintersection.node[0].nic.mac1609_4 ReceivedBroadcasts 5
+scalar eintersection.node[0].nic.mac1609_4 SentPackets 6
+scalar eintersection.node[0].nic.mac1609_4 SentAcknowledgements 0
+scalar eintersection.node[0].nic.mac1609_4 RetriesExceeded 0
+scalar eintersection.node[0].nic.mac1609_4 SNIRLostPackets 0
+scalar eintersection.node[0].nic.mac1609_4 RXTXLostPackets 0
+scalar eintersection.node[0].nic.mac1609_4 TotalLostPackets 0
+scalar eintersection.node[0].nic.mac1609_4 DroppedPacketsInMac 0
+scalar eintersection.node[0].nic.mac1609_4 TooLittleTime 0
+scalar eintersection.node[0].nic.mac1609_4 TimesIntoBackoff 6
+scalar eintersection.node[0].nic.mac1609_4 SlotsBackoff 15
+scalar eintersection.node[0].nic.mac1609_4 NumInternalContention 0
+scalar eintersection.node[0].nic.mac1609_4 totalBusyTime 0.00115
+scalar eintersection.node[0].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar eintersection.node[0].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar eintersection.node[0].nic.mac1609_4 sentPackets:count 6
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar eintersection.node[0].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar eintersection.node[0].nic.mac1609_4 channelBusy:timeavg 6.3888888888889e-05
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar eintersection.node[0].veinsmobility startTime 4
+scalar eintersection.node[0].veinsmobility totalTime 18
+scalar eintersection.node[0].veinsmobility stopTime 22
+scalar eintersection.node[0].veinsmobility minSpeed 0.42220135787502
+scalar eintersection.node[0].veinsmobility maxSpeed 10.377544038184
+scalar eintersection.node[0].veinsmobility totalDistance 100.55758075832
+scalar eintersection.node[0].veinsmobility totalCO2Emission 37.932261694855
+scalar eintersection.node[1].appl generatedWSMs 0
+scalar eintersection.node[1].appl receivedWSMs 0
+scalar eintersection.node[1].appl generatedBSMs 5
+scalar eintersection.node[1].appl receivedBSMs 5
+scalar eintersection.node[1].appl generatedWSAs 0
+scalar eintersection.node[1].appl receivedWSAs 0
+scalar eintersection.node[1].nic.phy80211p busyTime 4e-05
+scalar eintersection.node[1].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar eintersection.node[1].nic.mac1609_4 ReceivedBroadcasts 5
+scalar eintersection.node[1].nic.mac1609_4 SentPackets 5
+scalar eintersection.node[1].nic.mac1609_4 SentAcknowledgements 0
+scalar eintersection.node[1].nic.mac1609_4 RetriesExceeded 0
+scalar eintersection.node[1].nic.mac1609_4 SNIRLostPackets 0
+scalar eintersection.node[1].nic.mac1609_4 RXTXLostPackets 0
+scalar eintersection.node[1].nic.mac1609_4 TotalLostPackets 0
+scalar eintersection.node[1].nic.mac1609_4 DroppedPacketsInMac 0
+scalar eintersection.node[1].nic.mac1609_4 TooLittleTime 0
+scalar eintersection.node[1].nic.mac1609_4 TimesIntoBackoff 5
+scalar eintersection.node[1].nic.mac1609_4 SlotsBackoff 6
+scalar eintersection.node[1].nic.mac1609_4 NumInternalContention 0
+scalar eintersection.node[1].nic.mac1609_4 totalBusyTime 0.001045
+scalar eintersection.node[1].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar eintersection.node[1].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar eintersection.node[1].nic.mac1609_4 sentPackets:count 5
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar eintersection.node[1].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar eintersection.node[1].nic.mac1609_4 channelBusy:timeavg 8.0384615384615e-05
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar eintersection.node[1].veinsmobility startTime 9
+scalar eintersection.node[1].veinsmobility totalTime 13
+scalar eintersection.node[1].veinsmobility stopTime 22
+scalar eintersection.node[1].veinsmobility minSpeed 0.49628148666453
+scalar eintersection.node[1].veinsmobility maxSpeed 8.188415545792
+scalar eintersection.node[1].veinsmobility totalDistance 59.455588385323
+scalar eintersection.node[1].veinsmobility totalCO2Emission 25.019671352042
+

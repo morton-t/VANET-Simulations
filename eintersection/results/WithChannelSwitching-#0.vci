@@ -1,0 +1,71 @@
+file 5916 1699485305                                            
+version 2
+run WithChannelSwitching-0-20231103-04:34:22-99030
+attr configname WithChannelSwitching
+attr datetime 20231103-04:34:22
+attr experiment WithChannelSwitching
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network eintersection
+attr processid 99030
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.**.nic.mac1609_4.useServiceChannel true
+param *.node[*].appl.dataOnSch true
+param *.playgroundSizeX 2500m
+param *.playgroundSizeY 2500m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown false
+param *.manager.launchConfig "xmldoc(\"emergency.launchd.xml\")"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist true
+param *.**.nic.mac1609_4.txPower 20mW
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.node[*].applType "\"MyVeinsApp\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons true
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 3s
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].veinsmobility.setHostSpeed false
+param *.node[*0].veinsmobility.accidentCount 0
+param *.node[*0].veinsmobility.accidentStart 73s
+param *.node[*0].veinsmobility.accidentDuration 50s
+
+vector 0 eintersection.node[0].veinsmobility posx ETV
+0	2348 313 5 800 4 22 19 530.2 533.4 10087.681009981 5355887.5945134
+vector 1 eintersection.node[0].veinsmobility posy ETV
+1	2661 451 5 800 4 22 19 30.1 129.94453330627 1225.740109335 98018.974199934
+vector 2 eintersection.node[0].veinsmobility speed ETV
+2	3112 441 25 800 5 22 18 0.42220135787502 10.377544038184 100.24453330627 735.43007699784
+vector 3 eintersection.node[0].veinsmobility acceleration ETV
+3	3553 433 46 800 6 22 17 0.40631461273879 0.75001316182315 9.955342680309 6.0774469622251
+vector 4 eintersection.node[0].veinsmobility co2emission ETV
+4	3986 417 46 800 6 22 17 1.3694364198914 3.2115269196511 37.932261694854 89.760562117032
+vector 5 eintersection.node[1].veinsmobility posx ETV
+5	4403 239 118 800 9 22 14 530.2 533.4 7435.8740680148 3949469.9442841
+vector 6 eintersection.node[1].veinsmobility posy ETV
+6	4642 338 118 800 9 22 14 30.1 88.826954968657 712.15614777761 41287.620329447
+vector 7 eintersection.node[1].veinsmobility speed ETV
+7	4980 324 188 800 10 22 13 0.49628148666453 8.188415545792 59.126954968657 347.39288920843
+vector 8 eintersection.node[1].veinsmobility acceleration ETV
+8	5304 311 229 800 11 22 12 0.42614061757922 0.79142938638106 7.6921340591274 5.0796542164479
+vector 9 eintersection.node[1].veinsmobility co2emission ETV
+9	5615 301 229 800 11 22 12 1.3171445575074 2.6799758933019 25.019671352042 54.143272380769

@@ -1,0 +1,33 @@
+<routes>
+        <vType id="passenger" accel="0.8" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="25" vClass="passenger" guiShape="passenger"/>
+        <vType id="attacker" accel="0.8" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="25" vClass="passenger" guiShape="passenger"/>
+        <vType id="ghost" accel="0.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="3" vClass="passenger" guiShape="passenger"/>
+
+        <route id="right" edges="1i 2o" />
+        <route id="down" edges="4i 3o" />
+	<vehicle id="down_0" type="passenger" route="down" depart="0" departLane="random" color="0,0,1"/>
+	<vehicle id="down_1" type="passenger" route="down" depart="4" departLane="random" color="0,0,1"/>
+	<vehicle id="right_2" type="passenger" route="right" depart="6" departLane="random" color="0,0,1"/>
+	<vehicle id="down_3" type="passenger" route="down" depart="9" departLane="random" color="0,0,1"/>
+	<vehicle id="down_4" type="passenger" route="down" depart="33" departLane="random" color="0,0,1"/>
+	<vehicle id="right_5" type="ghost" route="right" depart="50" departLane="random" color="1,1,1"/>	
+	<vehicle id="right_6" type="ghost" route="right" depart="50" departLane="random" color="1,1,1"/>
+	<vehicle id="right_7" type="ghost" route="right" depart="50" departLane="random" color="1,1,1"/>
+	<vehicle id="right_8" type="ghost" route="right" depart="50" departLane="random" color="1,1,1"/>
+	<vehicle id="right_9" type="ghost" route="right" depart="50" departLane="random" color="1,1,1"/>
+	<vehicle id="right_10" type="attacker" route="right" depart="50" departLane="random" color="1,0,0"/>
+	<vehicle id="right_11" type="passenger" route="right" depart="62" departLane="random" color="0,0,1"/>
+	<vehicle id="right_12" type="passenger" route="right" depart="63" departLane="random" color="0,0,1"/>
+	<vehicle id="down_13" type="passenger" route="down" depart="134" departLane="random" color="0,0,1"/>
+	<vehicle id="right_14" type="passenger" route="right" depart="145" departLane="random" color="0,0,1"/>
+	<vehicle id="down_15" type="passenger" route="down" depart="148" departLane="random" color="0,0,1"/>
+	<vehicle id="right_16" type="passenger" route="right" depart="162" departLane="random" color="0,0,1"/>
+	<vehicle id="right_17" type="passenger" route="right" depart="171" departLane="random" color="0,0,1"/>
+	<vehicle id="right_18" type="passenger" route="right" depart="184" departLane="random" color="0,0,1"/>
+	<vehicle id="right_19" type="passenger" route="right" depart="197" departLane="random" color="0,0,1"/>
+	<vehicle id="down_20" type="passenger" route="down" depart="207" departLane="random" color="0,0,1"/>
+	<vehicle id="down_21" type="passenger" route="down" depart="213" departLane="random" color="0,0,1"/>
+	<vehicle id="down_22" type="passenger" route="down" depart="240" departLane="random" color="0,0,1"/>
+	<vehicle id="down_23" type="passenger" route="down" depart="246" departLane="random" color="0,0,1"/>
+	<vehicle id="down_24" type="passenger" route="down" depart="250" departLane="random" color="0,0,1"/>
+</routes>

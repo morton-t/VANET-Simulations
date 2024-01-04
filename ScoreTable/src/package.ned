@@ -1,0 +1,3 @@
+package emergencyintersection;
+
+@license(LGPL);

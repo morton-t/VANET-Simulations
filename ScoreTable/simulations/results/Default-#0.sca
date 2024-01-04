@@ -1,0 +1,1019 @@
+version 2
+run Default-0-20240101-23:16:24-26813
+attr configname Default
+attr datetime 20240101-23:16:24
+attr experiment Default
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network scoretable
+attr processid 26813
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.playgroundSizeX 2500m
+param *.playgroundSizeY 2500m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown false
+param *.manager.launchConfig "xmldoc(\"scoretable.launchd.xml\")"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist true
+param *.**.nic.mac1609_4.txPower 20mW
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.node[*].applType "\"VeinsApp\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons true
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 3s
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].veinsmobility.setHostSpeed false
+param *.node[*0].veinsmobility.accidentCount 0
+param *.node[*0].veinsmobility.accidentStart 73s
+param *.node[*0].veinsmobility.accidentDuration 50s
+
+scalar scoretable.node[0].appl generatedWSMs 82
+scalar scoretable.node[0].appl receivedWSMs 166
+scalar scoretable.node[0].appl generatedBSMs 27
+scalar scoretable.node[0].appl receivedBSMs 154
+scalar scoretable.node[0].appl generatedWSAs 0
+scalar scoretable.node[0].appl receivedWSAs 0
+scalar scoretable.node[0].nic.phy80211p busyTime 0.0012025365853659
+scalar scoretable.node[0].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[0].nic.mac1609_4 ReceivedBroadcasts 320
+scalar scoretable.node[0].nic.mac1609_4 SentPackets 109
+scalar scoretable.node[0].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[0].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[0].nic.mac1609_4 SNIRLostPackets 190
+scalar scoretable.node[0].nic.mac1609_4 RXTXLostPackets 102
+scalar scoretable.node[0].nic.mac1609_4 TotalLostPackets 292
+scalar scoretable.node[0].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[0].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[0].nic.mac1609_4 TimesIntoBackoff 191
+scalar scoretable.node[0].nic.mac1609_4 SlotsBackoff 158
+scalar scoretable.node[0].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[0].nic.mac1609_4 totalBusyTime 0.090853004166
+scalar scoretable.node[0].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[0].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[0].nic.mac1609_4 sentPackets:count 109
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[0].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[0].nic.mac1609_4 channelBusy:timeavg 0.001107963465439
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[0].veinsmobility startTime 1
+scalar scoretable.node[0].veinsmobility totalTime 81
+scalar scoretable.node[0].veinsmobility stopTime 83
+scalar scoretable.node[0].veinsmobility minSpeed 0.73833486335352
+scalar scoretable.node[0].veinsmobility maxSpeed 21.686052342703
+scalar scoretable.node[0].veinsmobility totalDistance 993.05771548347
+scalar scoretable.node[0].veinsmobility totalCO2Emission 210.16482929845
+scalar scoretable.node[2].appl generatedWSMs 86
+scalar scoretable.node[2].appl receivedWSMs 155
+scalar scoretable.node[2].appl generatedBSMs 29
+scalar scoretable.node[2].appl receivedBSMs 142
+scalar scoretable.node[2].appl generatedWSAs 0
+scalar scoretable.node[2].appl receivedWSAs 0
+scalar scoretable.node[2].nic.phy80211p busyTime 0.0014682790697674
+scalar scoretable.node[2].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[2].nic.mac1609_4 ReceivedBroadcasts 297
+scalar scoretable.node[2].nic.mac1609_4 SentPackets 115
+scalar scoretable.node[2].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[2].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[2].nic.mac1609_4 SNIRLostPackets 351
+scalar scoretable.node[2].nic.mac1609_4 RXTXLostPackets 106
+scalar scoretable.node[2].nic.mac1609_4 TotalLostPackets 457
+scalar scoretable.node[2].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[2].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[2].nic.mac1609_4 TimesIntoBackoff 201
+scalar scoretable.node[2].nic.mac1609_4 SlotsBackoff 175
+scalar scoretable.node[2].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[2].nic.mac1609_4 totalBusyTime 0.104347036852
+scalar scoretable.node[2].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[2].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[2].nic.mac1609_4 sentPackets:count 115
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[2].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[2].nic.mac1609_4 channelBusy:timeavg 0.001213337637814
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[2].veinsmobility startTime 7
+scalar scoretable.node[2].veinsmobility totalTime 85
+scalar scoretable.node[2].veinsmobility stopTime 93
+scalar scoretable.node[2].veinsmobility minSpeed 0.76947668353096
+scalar scoretable.node[2].veinsmobility maxSpeed 19.960105425676
+scalar scoretable.node[2].veinsmobility totalDistance 990.10834419586
+scalar scoretable.node[2].veinsmobility totalCO2Emission 205.12884993715
+scalar scoretable.node[1].appl generatedWSMs 139
+scalar scoretable.node[1].appl receivedWSMs 333
+scalar scoretable.node[1].appl generatedBSMs 46
+scalar scoretable.node[1].appl receivedBSMs 359
+scalar scoretable.node[1].appl generatedWSAs 0
+scalar scoretable.node[1].appl receivedWSAs 0
+scalar scoretable.node[1].nic.phy80211p busyTime 0.0016837985611511
+scalar scoretable.node[1].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[1].nic.mac1609_4 ReceivedBroadcasts 692
+scalar scoretable.node[1].nic.mac1609_4 SentPackets 185
+scalar scoretable.node[1].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[1].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[1].nic.mac1609_4 SNIRLostPackets 516
+scalar scoretable.node[1].nic.mac1609_4 RXTXLostPackets 240
+scalar scoretable.node[1].nic.mac1609_4 TotalLostPackets 756
+scalar scoretable.node[1].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[1].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[1].nic.mac1609_4 TimesIntoBackoff 324
+scalar scoretable.node[1].nic.mac1609_4 SlotsBackoff 265
+scalar scoretable.node[1].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[1].nic.mac1609_4 totalBusyTime 0.18078744497
+scalar scoretable.node[1].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[1].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[1].nic.mac1609_4 sentPackets:count 185
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[1].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[1].nic.mac1609_4 channelBusy:timeavg 0.0013006291005036
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[1].veinsmobility startTime 5
+scalar scoretable.node[1].veinsmobility totalTime 138
+scalar scoretable.node[1].veinsmobility stopTime 144
+scalar scoretable.node[1].veinsmobility minSpeed 0
+scalar scoretable.node[1].veinsmobility maxSpeed 20.293356695013
+scalar scoretable.node[1].veinsmobility totalDistance 991.71606084633
+scalar scoretable.node[1].veinsmobility totalCO2Emission 274.1995777753
+scalar scoretable.node[3].appl generatedWSMs 135
+scalar scoretable.node[3].appl receivedWSMs 335
+scalar scoretable.node[3].appl generatedBSMs 45
+scalar scoretable.node[3].appl receivedBSMs 362
+scalar scoretable.node[3].appl generatedWSAs 0
+scalar scoretable.node[3].appl receivedWSAs 0
+scalar scoretable.node[3].nic.phy80211p busyTime 0.0017969185185185
+scalar scoretable.node[3].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[3].nic.mac1609_4 ReceivedBroadcasts 697
+scalar scoretable.node[3].nic.mac1609_4 SentPackets 180
+scalar scoretable.node[3].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[3].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[3].nic.mac1609_4 SNIRLostPackets 550
+scalar scoretable.node[3].nic.mac1609_4 RXTXLostPackets 207
+scalar scoretable.node[3].nic.mac1609_4 TotalLostPackets 757
+scalar scoretable.node[3].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[3].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[3].nic.mac1609_4 TimesIntoBackoff 315
+scalar scoretable.node[3].nic.mac1609_4 SlotsBackoff 256
+scalar scoretable.node[3].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[3].nic.mac1609_4 totalBusyTime 0.179005693441
+scalar scoretable.node[3].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[3].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[3].nic.mac1609_4 sentPackets:count 180
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[3].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[3].nic.mac1609_4 channelBusy:timeavg 0.001325968099563
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[3].veinsmobility startTime 10
+scalar scoretable.node[3].veinsmobility totalTime 134
+scalar scoretable.node[3].veinsmobility stopTime 145
+scalar scoretable.node[3].veinsmobility minSpeed 0
+scalar scoretable.node[3].veinsmobility maxSpeed 19.666455683292
+scalar scoretable.node[3].veinsmobility totalDistance 992.78951869567
+scalar scoretable.node[3].veinsmobility totalCO2Emission 265.57176168886
+scalar scoretable.node[4].appl generatedWSMs 119
+scalar scoretable.node[4].appl receivedWSMs 233
+scalar scoretable.node[4].appl generatedBSMs 40
+scalar scoretable.node[4].appl receivedBSMs 358
+scalar scoretable.node[4].appl generatedWSAs 0
+scalar scoretable.node[4].appl receivedWSAs 0
+scalar scoretable.node[4].nic.phy80211p busyTime 0.0020190252100841
+scalar scoretable.node[4].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[4].nic.mac1609_4 ReceivedBroadcasts 591
+scalar scoretable.node[4].nic.mac1609_4 SentPackets 159
+scalar scoretable.node[4].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[4].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[4].nic.mac1609_4 SNIRLostPackets 646
+scalar scoretable.node[4].nic.mac1609_4 RXTXLostPackets 228
+scalar scoretable.node[4].nic.mac1609_4 TotalLostPackets 874
+scalar scoretable.node[4].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[4].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[4].nic.mac1609_4 TimesIntoBackoff 278
+scalar scoretable.node[4].nic.mac1609_4 SlotsBackoff 227
+scalar scoretable.node[4].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[4].nic.mac1609_4 totalBusyTime 0.169185026284
+scalar scoretable.node[4].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[4].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[4].nic.mac1609_4 sentPackets:count 159
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[4].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[4].nic.mac1609_4 channelBusy:timeavg 0.0014217229099496
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[4].veinsmobility startTime 34
+scalar scoretable.node[4].veinsmobility totalTime 118
+scalar scoretable.node[4].veinsmobility stopTime 153
+scalar scoretable.node[4].veinsmobility minSpeed 0
+scalar scoretable.node[4].veinsmobility maxSpeed 17.142256782856
+scalar scoretable.node[4].veinsmobility totalDistance 994.31511838149
+scalar scoretable.node[4].veinsmobility totalCO2Emission 234.77480171528
+scalar scoretable.node[15].appl generatedWSMs 85
+scalar scoretable.node[15].appl receivedWSMs 137
+scalar scoretable.node[15].appl generatedBSMs 29
+scalar scoretable.node[15].appl receivedBSMs 361
+scalar scoretable.node[15].appl generatedWSAs 0
+scalar scoretable.node[15].appl receivedWSAs 0
+scalar scoretable.node[15].nic.phy80211p busyTime 0.0028515764705883
+scalar scoretable.node[15].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[15].nic.mac1609_4 ReceivedBroadcasts 498
+scalar scoretable.node[15].nic.mac1609_4 SentPackets 114
+scalar scoretable.node[15].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[15].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[15].nic.mac1609_4 SNIRLostPackets 752
+scalar scoretable.node[15].nic.mac1609_4 RXTXLostPackets 240
+scalar scoretable.node[15].nic.mac1609_4 TotalLostPackets 992
+scalar scoretable.node[15].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[15].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[15].nic.mac1609_4 TimesIntoBackoff 199
+scalar scoretable.node[15].nic.mac1609_4 SlotsBackoff 151
+scalar scoretable.node[15].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[15].nic.mac1609_4 totalBusyTime 0.138098215977
+scalar scoretable.node[15].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[15].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[15].nic.mac1609_4 sentPackets:count 114
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[15].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[15].nic.mac1609_4 channelBusy:timeavg 0.0016246848938471
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[15].veinsmobility startTime 149
+scalar scoretable.node[15].veinsmobility totalTime 84
+scalar scoretable.node[15].veinsmobility stopTime 234
+scalar scoretable.node[15].veinsmobility minSpeed 0.61987624913454
+scalar scoretable.node[15].veinsmobility maxSpeed 20.159489663007
+scalar scoretable.node[15].veinsmobility totalDistance 992.42167469006
+scalar scoretable.node[15].veinsmobility totalCO2Emission 206.08380165351
+scalar scoretable.node[13].appl generatedWSMs 100
+scalar scoretable.node[13].appl receivedWSMs 148
+scalar scoretable.node[13].appl generatedBSMs 33
+scalar scoretable.node[13].appl receivedBSMs 405
+scalar scoretable.node[13].appl generatedWSAs 0
+scalar scoretable.node[13].appl receivedWSAs 0
+scalar scoretable.node[13].nic.phy80211p busyTime 0.00275792
+scalar scoretable.node[13].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[13].nic.mac1609_4 ReceivedBroadcasts 553
+scalar scoretable.node[13].nic.mac1609_4 SentPackets 133
+scalar scoretable.node[13].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[13].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[13].nic.mac1609_4 SNIRLostPackets 873
+scalar scoretable.node[13].nic.mac1609_4 RXTXLostPackets 285
+scalar scoretable.node[13].nic.mac1609_4 TotalLostPackets 1158
+scalar scoretable.node[13].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[13].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[13].nic.mac1609_4 TimesIntoBackoff 233
+scalar scoretable.node[13].nic.mac1609_4 SlotsBackoff 203
+scalar scoretable.node[13].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[13].nic.mac1609_4 totalBusyTime 0.161270013377
+scalar scoretable.node[13].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[13].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[13].nic.mac1609_4 sentPackets:count 133
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[13].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[13].nic.mac1609_4 channelBusy:timeavg 0.00161270013377
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[13].veinsmobility startTime 135
+scalar scoretable.node[13].veinsmobility totalTime 99
+scalar scoretable.node[13].veinsmobility stopTime 235
+scalar scoretable.node[13].veinsmobility minSpeed 0.0029900965346053
+scalar scoretable.node[13].veinsmobility maxSpeed 19.17563142128
+scalar scoretable.node[13].veinsmobility totalDistance 985.83386486387
+scalar scoretable.node[13].veinsmobility totalCO2Emission 229.01065107964
+scalar scoretable.node[20].appl generatedWSMs 111
+scalar scoretable.node[20].appl receivedWSMs 163
+scalar scoretable.node[20].appl generatedBSMs 37
+scalar scoretable.node[20].appl receivedBSMs 596
+scalar scoretable.node[20].appl generatedWSAs 0
+scalar scoretable.node[20].appl receivedWSAs 0
+scalar scoretable.node[20].nic.phy80211p busyTime 0.0034885765765766
+scalar scoretable.node[20].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[20].nic.mac1609_4 ReceivedBroadcasts 759
+scalar scoretable.node[20].nic.mac1609_4 SentPackets 148
+scalar scoretable.node[20].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[20].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[20].nic.mac1609_4 SNIRLostPackets 1245
+scalar scoretable.node[20].nic.mac1609_4 RXTXLostPackets 421
+scalar scoretable.node[20].nic.mac1609_4 TotalLostPackets 1666
+scalar scoretable.node[20].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[20].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[20].nic.mac1609_4 TimesIntoBackoff 259
+scalar scoretable.node[20].nic.mac1609_4 SlotsBackoff 216
+scalar scoretable.node[20].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[20].nic.mac1609_4 totalBusyTime 0.194727543074
+scalar scoretable.node[20].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[20].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[20].nic.mac1609_4 sentPackets:count 148
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[20].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[20].nic.mac1609_4 channelBusy:timeavg 0.0017543021898559
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[20].veinsmobility startTime 208
+scalar scoretable.node[20].veinsmobility totalTime 110
+scalar scoretable.node[20].veinsmobility stopTime 319
+scalar scoretable.node[20].veinsmobility minSpeed 0
+scalar scoretable.node[20].veinsmobility maxSpeed 22.684042194486
+scalar scoretable.node[20].veinsmobility totalDistance 988.7832010955
+scalar scoretable.node[20].veinsmobility totalCO2Emission 263.96576617941
+scalar scoretable.node[22].appl generatedWSMs 87
+scalar scoretable.node[22].appl receivedWSMs 103
+scalar scoretable.node[22].appl generatedBSMs 29
+scalar scoretable.node[22].appl receivedBSMs 485
+scalar scoretable.node[22].appl generatedWSAs 0
+scalar scoretable.node[22].appl receivedWSAs 0
+scalar scoretable.node[22].nic.phy80211p busyTime 0.0035557701149426
+scalar scoretable.node[22].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[22].nic.mac1609_4 ReceivedBroadcasts 588
+scalar scoretable.node[22].nic.mac1609_4 SentPackets 116
+scalar scoretable.node[22].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[22].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[22].nic.mac1609_4 SNIRLostPackets 1013
+scalar scoretable.node[22].nic.mac1609_4 RXTXLostPackets 337
+scalar scoretable.node[22].nic.mac1609_4 TotalLostPackets 1350
+scalar scoretable.node[22].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[22].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[22].nic.mac1609_4 TimesIntoBackoff 203
+scalar scoretable.node[22].nic.mac1609_4 SlotsBackoff 173
+scalar scoretable.node[22].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[22].nic.mac1609_4 totalBusyTime 0.15402941389
+scalar scoretable.node[22].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[22].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[22].nic.mac1609_4 sentPackets:count 116
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[22].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[22].nic.mac1609_4 channelBusy:timeavg 0.0017704530332184
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[22].veinsmobility startTime 241
+scalar scoretable.node[22].veinsmobility totalTime 86
+scalar scoretable.node[22].veinsmobility stopTime 328
+scalar scoretable.node[22].veinsmobility minSpeed 0.48912549363449
+scalar scoretable.node[22].veinsmobility maxSpeed 19.536099659837
+scalar scoretable.node[22].veinsmobility totalDistance 993.84142419382
+scalar scoretable.node[22].veinsmobility totalCO2Emission 203.38310329102
+scalar scoretable.node[21].appl generatedWSMs 115
+scalar scoretable.node[21].appl receivedWSMs 151
+scalar scoretable.node[21].appl generatedBSMs 39
+scalar scoretable.node[21].appl receivedBSMs 614
+scalar scoretable.node[21].appl generatedWSAs 0
+scalar scoretable.node[21].appl receivedWSAs 0
+scalar scoretable.node[21].nic.phy80211p busyTime 0.0038986434782609
+scalar scoretable.node[21].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[21].nic.mac1609_4 ReceivedBroadcasts 765
+scalar scoretable.node[21].nic.mac1609_4 SentPackets 154
+scalar scoretable.node[21].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[21].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[21].nic.mac1609_4 SNIRLostPackets 1514
+scalar scoretable.node[21].nic.mac1609_4 RXTXLostPackets 236
+scalar scoretable.node[21].nic.mac1609_4 TotalLostPackets 1750
+scalar scoretable.node[21].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[21].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[21].nic.mac1609_4 TimesIntoBackoff 308
+scalar scoretable.node[21].nic.mac1609_4 SlotsBackoff 213
+scalar scoretable.node[21].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[21].nic.mac1609_4 totalBusyTime 0.201764138988
+scalar scoretable.node[21].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[21].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[21].nic.mac1609_4 sentPackets:count 154
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[21].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[21].nic.mac1609_4 channelBusy:timeavg 0.0017544707738087
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[21].veinsmobility startTime 214
+scalar scoretable.node[21].veinsmobility totalTime 114
+scalar scoretable.node[21].veinsmobility stopTime 329
+scalar scoretable.node[21].veinsmobility minSpeed 0
+scalar scoretable.node[21].veinsmobility maxSpeed 17.141896785113
+scalar scoretable.node[21].veinsmobility totalDistance 988.25064326606
+scalar scoretable.node[21].veinsmobility totalCO2Emission 230.32894297438
+scalar scoretable.node[24].appl generatedWSMs 92
+scalar scoretable.node[24].appl receivedWSMs 153
+scalar scoretable.node[24].appl generatedBSMs 31
+scalar scoretable.node[24].appl receivedBSMs 505
+scalar scoretable.node[24].appl generatedWSAs 0
+scalar scoretable.node[24].appl receivedWSAs 0
+scalar scoretable.node[24].nic.phy80211p busyTime 0.0034986086956522
+scalar scoretable.node[24].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[24].nic.mac1609_4 ReceivedBroadcasts 658
+scalar scoretable.node[24].nic.mac1609_4 SentPackets 123
+scalar scoretable.node[24].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[24].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[24].nic.mac1609_4 SNIRLostPackets 1008
+scalar scoretable.node[24].nic.mac1609_4 RXTXLostPackets 347
+scalar scoretable.node[24].nic.mac1609_4 TotalLostPackets 1355
+scalar scoretable.node[24].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[24].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[24].nic.mac1609_4 TimesIntoBackoff 215
+scalar scoretable.node[24].nic.mac1609_4 SlotsBackoff 186
+scalar scoretable.node[24].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[24].nic.mac1609_4 totalBusyTime 0.161659520162
+scalar scoretable.node[24].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[24].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[24].nic.mac1609_4 sentPackets:count 123
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[24].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[24].nic.mac1609_4 channelBusy:timeavg 0.0017571686974131
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[24].veinsmobility startTime 252
+scalar scoretable.node[24].veinsmobility totalTime 91
+scalar scoretable.node[24].veinsmobility stopTime 344
+scalar scoretable.node[24].veinsmobility minSpeed 0.60361801143736
+scalar scoretable.node[24].veinsmobility maxSpeed 18.233209265757
+scalar scoretable.node[24].veinsmobility totalDistance 992.84818202886
+scalar scoretable.node[24].veinsmobility totalCO2Emission 202.81169932312
+scalar scoretable.node[23].appl generatedWSMs 108
+scalar scoretable.node[23].appl receivedWSMs 151
+scalar scoretable.node[23].appl generatedBSMs 36
+scalar scoretable.node[23].appl receivedBSMs 578
+scalar scoretable.node[23].appl generatedWSAs 0
+scalar scoretable.node[23].appl receivedWSAs 0
+scalar scoretable.node[23].nic.phy80211p busyTime 0.0034222222222223
+scalar scoretable.node[23].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[23].nic.mac1609_4 ReceivedBroadcasts 729
+scalar scoretable.node[23].nic.mac1609_4 SentPackets 144
+scalar scoretable.node[23].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[23].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[23].nic.mac1609_4 SNIRLostPackets 1183
+scalar scoretable.node[23].nic.mac1609_4 RXTXLostPackets 397
+scalar scoretable.node[23].nic.mac1609_4 TotalLostPackets 1580
+scalar scoretable.node[23].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[23].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[23].nic.mac1609_4 TimesIntoBackoff 252
+scalar scoretable.node[23].nic.mac1609_4 SlotsBackoff 220
+scalar scoretable.node[23].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[23].nic.mac1609_4 totalBusyTime 0.188353781519
+scalar scoretable.node[23].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[23].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[23].nic.mac1609_4 sentPackets:count 144
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[23].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[23].nic.mac1609_4 channelBusy:timeavg 0.0017440164955463
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[23].veinsmobility startTime 247
+scalar scoretable.node[23].veinsmobility totalTime 107
+scalar scoretable.node[23].veinsmobility stopTime 355
+scalar scoretable.node[23].veinsmobility minSpeed 0.76720407772809
+scalar scoretable.node[23].veinsmobility maxSpeed 14.531419294903
+scalar scoretable.node[23].veinsmobility totalDistance 990.58431002232
+scalar scoretable.node[23].veinsmobility totalCO2Emission 198.70168029602
+scalar scoretable.node[6].appl generatedWSMs 354
+scalar scoretable.node[6].appl receivedWSMs 852
+scalar scoretable.node[6].appl generatedBSMs 118
+scalar scoretable.node[6].appl receivedBSMs 1542
+scalar scoretable.node[6].appl generatedWSAs 0
+scalar scoretable.node[6].appl receivedWSAs 0
+scalar scoretable.node[6].nic.phy80211p busyTime 0.0029022824858758
+scalar scoretable.node[6].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[6].nic.mac1609_4 ReceivedBroadcasts 2394
+scalar scoretable.node[6].nic.mac1609_4 SentPackets 472
+scalar scoretable.node[6].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[6].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[6].nic.mac1609_4 SNIRLostPackets 2888
+scalar scoretable.node[6].nic.mac1609_4 RXTXLostPackets 898
+scalar scoretable.node[6].nic.mac1609_4 TotalLostPackets 3786
+scalar scoretable.node[6].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[6].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[6].nic.mac1609_4 TimesIntoBackoff 826
+scalar scoretable.node[6].nic.mac1609_4 SlotsBackoff 726
+scalar scoretable.node[6].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[6].nic.mac1609_4 totalBusyTime 0.573185187136
+scalar scoretable.node[6].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[6].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[6].nic.mac1609_4 sentPackets:count 472
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[6].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[6].nic.mac1609_4 channelBusy:timeavg 0.0016191671952994
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[6].veinsmobility startTime 52
+scalar scoretable.node[6].veinsmobility totalTime 353
+scalar scoretable.node[6].veinsmobility stopTime 406
+scalar scoretable.node[6].veinsmobility minSpeed 0.39644883074798
+scalar scoretable.node[6].veinsmobility maxSpeed 2.9997768316185
+scalar scoretable.node[6].veinsmobility totalDistance 994.36054877392
+scalar scoretable.node[6].veinsmobility totalCO2Emission 429.80956140312
+scalar scoretable.node[5].appl generatedWSMs 356
+scalar scoretable.node[5].appl receivedWSMs 876
+scalar scoretable.node[5].appl generatedBSMs 119
+scalar scoretable.node[5].appl receivedBSMs 1547
+scalar scoretable.node[5].appl generatedWSAs 0
+scalar scoretable.node[5].appl receivedWSAs 0
+scalar scoretable.node[5].nic.phy80211p busyTime 0.0027913483146068
+scalar scoretable.node[5].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[5].nic.mac1609_4 ReceivedBroadcasts 2423
+scalar scoretable.node[5].nic.mac1609_4 SentPackets 475
+scalar scoretable.node[5].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[5].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[5].nic.mac1609_4 SNIRLostPackets 2716
+scalar scoretable.node[5].nic.mac1609_4 RXTXLostPackets 1061
+scalar scoretable.node[5].nic.mac1609_4 TotalLostPackets 3777
+scalar scoretable.node[5].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[5].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[5].nic.mac1609_4 TimesIntoBackoff 832
+scalar scoretable.node[5].nic.mac1609_4 SlotsBackoff 686
+scalar scoretable.node[5].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[5].nic.mac1609_4 totalBusyTime 0.575796286818
+scalar scoretable.node[5].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[5].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[5].nic.mac1609_4 sentPackets:count 475
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[5].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[5].nic.mac1609_4 channelBusy:timeavg 0.0016174053000506
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[5].veinsmobility startTime 51
+scalar scoretable.node[5].veinsmobility totalTime 355
+scalar scoretable.node[5].veinsmobility stopTime 407
+scalar scoretable.node[5].veinsmobility minSpeed 0.22125093762419
+scalar scoretable.node[5].veinsmobility maxSpeed 2.9994436066831
+scalar scoretable.node[5].veinsmobility totalDistance 995.11060524202
+scalar scoretable.node[5].veinsmobility totalCO2Emission 433.7015119588
+scalar scoretable.node[7].appl generatedWSMs 354
+scalar scoretable.node[7].appl receivedWSMs 802
+scalar scoretable.node[7].appl generatedBSMs 118
+scalar scoretable.node[7].appl receivedBSMs 1548
+scalar scoretable.node[7].appl generatedWSAs 0
+scalar scoretable.node[7].appl receivedWSAs 0
+scalar scoretable.node[7].nic.phy80211p busyTime 0.0028103276836159
+scalar scoretable.node[7].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[7].nic.mac1609_4 ReceivedBroadcasts 2350
+scalar scoretable.node[7].nic.mac1609_4 SentPackets 472
+scalar scoretable.node[7].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[7].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[7].nic.mac1609_4 SNIRLostPackets 2795
+scalar scoretable.node[7].nic.mac1609_4 RXTXLostPackets 1062
+scalar scoretable.node[7].nic.mac1609_4 TotalLostPackets 3857
+scalar scoretable.node[7].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[7].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[7].nic.mac1609_4 TimesIntoBackoff 826
+scalar scoretable.node[7].nic.mac1609_4 SlotsBackoff 717
+scalar scoretable.node[7].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[7].nic.mac1609_4 totalBusyTime 0.57429487844
+scalar scoretable.node[7].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[7].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[7].nic.mac1609_4 sentPackets:count 472
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[7].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[7].nic.mac1609_4 channelBusy:timeavg 0.0016223019164972
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[7].veinsmobility startTime 57
+scalar scoretable.node[7].veinsmobility totalTime 353
+scalar scoretable.node[7].veinsmobility stopTime 411
+scalar scoretable.node[7].veinsmobility minSpeed 0.57397696946282
+scalar scoretable.node[7].veinsmobility maxSpeed 2.9991024090908
+scalar scoretable.node[7].veinsmobility totalDistance 992.92785570238
+scalar scoretable.node[7].veinsmobility totalCO2Emission 429.51100097803
+scalar scoretable.node[8].appl generatedWSMs 353
+scalar scoretable.node[8].appl receivedWSMs 775
+scalar scoretable.node[8].appl generatedBSMs 118
+scalar scoretable.node[8].appl receivedBSMs 1542
+scalar scoretable.node[8].appl generatedWSAs 0
+scalar scoretable.node[8].appl receivedWSAs 0
+scalar scoretable.node[8].nic.phy80211p busyTime 0.0030602832861191
+scalar scoretable.node[8].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[8].nic.mac1609_4 ReceivedBroadcasts 2317
+scalar scoretable.node[8].nic.mac1609_4 SentPackets 471
+scalar scoretable.node[8].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[8].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[8].nic.mac1609_4 SNIRLostPackets 3194
+scalar scoretable.node[8].nic.mac1609_4 RXTXLostPackets 685
+scalar scoretable.node[8].nic.mac1609_4 TotalLostPackets 3879
+scalar scoretable.node[8].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[8].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[8].nic.mac1609_4 TimesIntoBackoff 824
+scalar scoretable.node[8].nic.mac1609_4 SlotsBackoff 671
+scalar scoretable.node[8].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[8].nic.mac1609_4 totalBusyTime 0.572720065895
+scalar scoretable.node[8].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[8].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[8].nic.mac1609_4 sentPackets:count 471
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[8].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[8].nic.mac1609_4 channelBusy:timeavg 0.0016224364472946
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[8].veinsmobility startTime 58
+scalar scoretable.node[8].veinsmobility totalTime 352
+scalar scoretable.node[8].veinsmobility stopTime 411
+scalar scoretable.node[8].veinsmobility minSpeed 0.36428491964597
+scalar scoretable.node[8].veinsmobility maxSpeed 2.9997442559106
+scalar scoretable.node[8].veinsmobility totalDistance 992.96823589581
+scalar scoretable.node[8].veinsmobility totalCO2Emission 429.02107529116
+scalar scoretable.node[10].appl generatedWSMs 350
+scalar scoretable.node[10].appl receivedWSMs 847
+scalar scoretable.node[10].appl generatedBSMs 116
+scalar scoretable.node[10].appl receivedBSMs 1536
+scalar scoretable.node[10].appl generatedWSAs 0
+scalar scoretable.node[10].appl receivedWSAs 0
+scalar scoretable.node[10].nic.phy80211p busyTime 0.0028050742857143
+scalar scoretable.node[10].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[10].nic.mac1609_4 ReceivedBroadcasts 2383
+scalar scoretable.node[10].nic.mac1609_4 SentPackets 466
+scalar scoretable.node[10].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[10].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[10].nic.mac1609_4 SNIRLostPackets 2699
+scalar scoretable.node[10].nic.mac1609_4 RXTXLostPackets 1080
+scalar scoretable.node[10].nic.mac1609_4 TotalLostPackets 3779
+scalar scoretable.node[10].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[10].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[10].nic.mac1609_4 TimesIntoBackoff 816
+scalar scoretable.node[10].nic.mac1609_4 SlotsBackoff 679
+scalar scoretable.node[10].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[10].nic.mac1609_4 totalBusyTime 0.5682092882
+scalar scoretable.node[10].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[10].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[10].nic.mac1609_4 sentPackets:count 466
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[10].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[10].nic.mac1609_4 channelBusy:timeavg 0.0016234551091429
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[10].veinsmobility startTime 64
+scalar scoretable.node[10].veinsmobility totalTime 349
+scalar scoretable.node[10].veinsmobility stopTime 414
+scalar scoretable.node[10].veinsmobility minSpeed 0.53082757441764
+scalar scoretable.node[10].veinsmobility maxSpeed 4.247632050747
+scalar scoretable.node[10].veinsmobility totalDistance 993.33063142952
+scalar scoretable.node[10].veinsmobility totalCO2Emission 430.4175137335
+scalar scoretable.node[9].appl generatedWSMs 353
+scalar scoretable.node[9].appl receivedWSMs 841
+scalar scoretable.node[9].appl generatedBSMs 118
+scalar scoretable.node[9].appl receivedBSMs 1542
+scalar scoretable.node[9].appl generatedWSAs 0
+scalar scoretable.node[9].appl receivedWSAs 0
+scalar scoretable.node[9].nic.phy80211p busyTime 0.0028128725212465
+scalar scoretable.node[9].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[9].nic.mac1609_4 ReceivedBroadcasts 2383
+scalar scoretable.node[9].nic.mac1609_4 SentPackets 471
+scalar scoretable.node[9].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[9].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[9].nic.mac1609_4 SNIRLostPackets 2751
+scalar scoretable.node[9].nic.mac1609_4 RXTXLostPackets 1060
+scalar scoretable.node[9].nic.mac1609_4 TotalLostPackets 3811
+scalar scoretable.node[9].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[9].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[9].nic.mac1609_4 TimesIntoBackoff 824
+scalar scoretable.node[9].nic.mac1609_4 SlotsBackoff 723
+scalar scoretable.node[9].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[9].nic.mac1609_4 totalBusyTime 0.571935745989
+scalar scoretable.node[9].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[9].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[9].nic.mac1609_4 sentPackets:count 471
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[9].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[9].nic.mac1609_4 channelBusy:timeavg 0.0016202145778725
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[9].veinsmobility startTime 62
+scalar scoretable.node[9].veinsmobility totalTime 352
+scalar scoretable.node[9].veinsmobility stopTime 415
+scalar scoretable.node[9].veinsmobility minSpeed 0.22182689897283
+scalar scoretable.node[9].veinsmobility maxSpeed 2.9987519506132
+scalar scoretable.node[9].veinsmobility totalDistance 991.86925915722
+scalar scoretable.node[9].veinsmobility totalCO2Emission 430.15221565342
+scalar scoretable.node[12].appl generatedWSMs 347
+scalar scoretable.node[12].appl receivedWSMs 814
+scalar scoretable.node[12].appl generatedBSMs 115
+scalar scoretable.node[12].appl receivedBSMs 1525
+scalar scoretable.node[12].appl generatedWSAs 0
+scalar scoretable.node[12].appl receivedWSAs 0
+scalar scoretable.node[12].nic.phy80211p busyTime 0.0028577521613833
+scalar scoretable.node[12].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[12].nic.mac1609_4 ReceivedBroadcasts 2339
+scalar scoretable.node[12].nic.mac1609_4 SentPackets 462
+scalar scoretable.node[12].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[12].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[12].nic.mac1609_4 SNIRLostPackets 2780
+scalar scoretable.node[12].nic.mac1609_4 RXTXLostPackets 996
+scalar scoretable.node[12].nic.mac1609_4 TotalLostPackets 3776
+scalar scoretable.node[12].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[12].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[12].nic.mac1609_4 TimesIntoBackoff 809
+scalar scoretable.node[12].nic.mac1609_4 SlotsBackoff 685
+scalar scoretable.node[12].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[12].nic.mac1609_4 totalBusyTime 0.563338998026
+scalar scoretable.node[12].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[12].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[12].nic.mac1609_4 sentPackets:count 462
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[12].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[12].nic.mac1609_4 channelBusy:timeavg 0.0016234553257233
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[12].veinsmobility startTime 69
+scalar scoretable.node[12].veinsmobility totalTime 346
+scalar scoretable.node[12].veinsmobility stopTime 416
+scalar scoretable.node[12].veinsmobility minSpeed 0.48086949260905
+scalar scoretable.node[12].veinsmobility maxSpeed 4.9831524379366
+scalar scoretable.node[12].veinsmobility totalDistance 990.00544548569
+scalar scoretable.node[12].veinsmobility totalCO2Emission 436.59622407229
+scalar scoretable.node[11].appl generatedWSMs 349
+scalar scoretable.node[11].appl receivedWSMs 792
+scalar scoretable.node[11].appl generatedBSMs 117
+scalar scoretable.node[11].appl receivedBSMs 1525
+scalar scoretable.node[11].appl generatedWSAs 0
+scalar scoretable.node[11].appl receivedWSAs 0
+scalar scoretable.node[11].nic.phy80211p busyTime 0.0029190830945559
+scalar scoretable.node[11].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[11].nic.mac1609_4 ReceivedBroadcasts 2317
+scalar scoretable.node[11].nic.mac1609_4 SentPackets 466
+scalar scoretable.node[11].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[11].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[11].nic.mac1609_4 SNIRLostPackets 2920
+scalar scoretable.node[11].nic.mac1609_4 RXTXLostPackets 890
+scalar scoretable.node[11].nic.mac1609_4 TotalLostPackets 3810
+scalar scoretable.node[11].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[11].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[11].nic.mac1609_4 TimesIntoBackoff 815
+scalar scoretable.node[11].nic.mac1609_4 SlotsBackoff 687
+scalar scoretable.node[11].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[11].nic.mac1609_4 totalBusyTime 0.565847814743
+scalar scoretable.node[11].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[11].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[11].nic.mac1609_4 sentPackets:count 466
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[11].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[11].nic.mac1609_4 channelBusy:timeavg 0.0016213404433897
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[11].veinsmobility startTime 69
+scalar scoretable.node[11].veinsmobility totalTime 348
+scalar scoretable.node[11].veinsmobility stopTime 418
+scalar scoretable.node[11].veinsmobility minSpeed 0.5806040333584
+scalar scoretable.node[11].veinsmobility maxSpeed 4.6621208995969
+scalar scoretable.node[11].veinsmobility totalDistance 991.89687842464
+scalar scoretable.node[11].veinsmobility totalCO2Emission 435.74929738687
+scalar scoretable.node[16].appl generatedWSMs 256
+scalar scoretable.node[16].appl receivedWSMs 548
+scalar scoretable.node[16].appl generatedBSMs 85
+scalar scoretable.node[16].appl receivedBSMs 1203
+scalar scoretable.node[16].appl generatedWSAs 0
+scalar scoretable.node[16].appl receivedWSAs 0
+scalar scoretable.node[16].nic.phy80211p busyTime 0.0030117187500001
+scalar scoretable.node[16].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[16].nic.mac1609_4 ReceivedBroadcasts 1751
+scalar scoretable.node[16].nic.mac1609_4 SentPackets 341
+scalar scoretable.node[16].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[16].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[16].nic.mac1609_4 SNIRLostPackets 2236
+scalar scoretable.node[16].nic.mac1609_4 RXTXLostPackets 824
+scalar scoretable.node[16].nic.mac1609_4 TotalLostPackets 3060
+scalar scoretable.node[16].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[16].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[16].nic.mac1609_4 TimesIntoBackoff 597
+scalar scoretable.node[16].nic.mac1609_4 SlotsBackoff 496
+scalar scoretable.node[16].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[16].nic.mac1609_4 totalBusyTime 0.424122054388
+scalar scoretable.node[16].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[16].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[16].nic.mac1609_4 sentPackets:count 341
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[16].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[16].nic.mac1609_4 channelBusy:timeavg 0.0016567267749531
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[16].veinsmobility startTime 163
+scalar scoretable.node[16].veinsmobility totalTime 255
+scalar scoretable.node[16].veinsmobility stopTime 419
+scalar scoretable.node[16].veinsmobility minSpeed 0.43049261402339
+scalar scoretable.node[16].veinsmobility maxSpeed 18.142599921208
+scalar scoretable.node[16].veinsmobility totalDistance 993.9840589587
+scalar scoretable.node[16].veinsmobility totalCO2Emission 384.44528800801
+scalar scoretable.node[14].appl generatedWSMs 275
+scalar scoretable.node[14].appl receivedWSMs 605
+scalar scoretable.node[14].appl generatedBSMs 91
+scalar scoretable.node[14].appl receivedBSMs 1265
+scalar scoretable.node[14].appl generatedWSAs 0
+scalar scoretable.node[14].appl receivedWSAs 0
+scalar scoretable.node[14].nic.phy80211p busyTime 0.0029688145454546
+scalar scoretable.node[14].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[14].nic.mac1609_4 ReceivedBroadcasts 1870
+scalar scoretable.node[14].nic.mac1609_4 SentPackets 366
+scalar scoretable.node[14].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[14].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[14].nic.mac1609_4 SNIRLostPackets 2347
+scalar scoretable.node[14].nic.mac1609_4 RXTXLostPackets 836
+scalar scoretable.node[14].nic.mac1609_4 TotalLostPackets 3183
+scalar scoretable.node[14].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[14].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[14].nic.mac1609_4 TimesIntoBackoff 641
+scalar scoretable.node[14].nic.mac1609_4 SlotsBackoff 533
+scalar scoretable.node[14].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[14].nic.mac1609_4 totalBusyTime 0.452327379117
+scalar scoretable.node[14].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[14].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[14].nic.mac1609_4 sentPackets:count 366
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[14].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[14].nic.mac1609_4 channelBusy:timeavg 0.0016448268331527
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[14].veinsmobility startTime 146
+scalar scoretable.node[14].veinsmobility totalTime 274
+scalar scoretable.node[14].veinsmobility stopTime 421
+scalar scoretable.node[14].veinsmobility minSpeed 0.71716440264136
+scalar scoretable.node[14].veinsmobility maxSpeed 17.335805677716
+scalar scoretable.node[14].veinsmobility totalDistance 993.65651418343
+scalar scoretable.node[14].veinsmobility totalCO2Emission 395.93880851768
+scalar scoretable.node[17].appl generatedWSMs 249
+scalar scoretable.node[17].appl receivedWSMs 547
+scalar scoretable.node[17].appl generatedBSMs 83
+scalar scoretable.node[17].appl receivedBSMs 1171
+scalar scoretable.node[17].appl generatedWSAs 0
+scalar scoretable.node[17].appl receivedWSAs 0
+scalar scoretable.node[17].nic.phy80211p busyTime 0.0029926425702812
+scalar scoretable.node[17].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[17].nic.mac1609_4 ReceivedBroadcasts 1718
+scalar scoretable.node[17].nic.mac1609_4 SentPackets 332
+scalar scoretable.node[17].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[17].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[17].nic.mac1609_4 SNIRLostPackets 2140
+scalar scoretable.node[17].nic.mac1609_4 RXTXLostPackets 828
+scalar scoretable.node[17].nic.mac1609_4 TotalLostPackets 2968
+scalar scoretable.node[17].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[17].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[17].nic.mac1609_4 TimesIntoBackoff 581
+scalar scoretable.node[17].nic.mac1609_4 SlotsBackoff 508
+scalar scoretable.node[17].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[17].nic.mac1609_4 totalBusyTime 0.412212863286
+scalar scoretable.node[17].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[17].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[17].nic.mac1609_4 sentPackets:count 332
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[17].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[17].nic.mac1609_4 channelBusy:timeavg 0.0016554733465301
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[17].veinsmobility startTime 172
+scalar scoretable.node[17].veinsmobility totalTime 248
+scalar scoretable.node[17].veinsmobility stopTime 421
+scalar scoretable.node[17].veinsmobility minSpeed 0.54446701472625
+scalar scoretable.node[17].veinsmobility maxSpeed 14.068447119077
+scalar scoretable.node[17].veinsmobility totalDistance 990.66699379858
+scalar scoretable.node[17].veinsmobility totalCO2Emission 360.66449898138
+scalar scoretable.node[18].appl generatedWSMs 238
+scalar scoretable.node[18].appl receivedWSMs 501
+scalar scoretable.node[18].appl generatedBSMs 79
+scalar scoretable.node[18].appl receivedBSMs 1122
+scalar scoretable.node[18].appl generatedWSAs 0
+scalar scoretable.node[18].appl receivedWSAs 0
+scalar scoretable.node[18].nic.phy80211p busyTime 0.0030266890756303
+scalar scoretable.node[18].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[18].nic.mac1609_4 ReceivedBroadcasts 1623
+scalar scoretable.node[18].nic.mac1609_4 SentPackets 317
+scalar scoretable.node[18].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[18].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[18].nic.mac1609_4 SNIRLostPackets 2101
+scalar scoretable.node[18].nic.mac1609_4 RXTXLostPackets 759
+scalar scoretable.node[18].nic.mac1609_4 TotalLostPackets 2860
+scalar scoretable.node[18].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[18].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[18].nic.mac1609_4 TimesIntoBackoff 555
+scalar scoretable.node[18].nic.mac1609_4 SlotsBackoff 492
+scalar scoretable.node[18].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[18].nic.mac1609_4 totalBusyTime 0.393225093233
+scalar scoretable.node[18].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[18].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[18].nic.mac1609_4 sentPackets:count 317
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[18].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[18].nic.mac1609_4 channelBusy:timeavg 0.0016522062740882
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[18].veinsmobility startTime 185
+scalar scoretable.node[18].veinsmobility totalTime 237
+scalar scoretable.node[18].veinsmobility stopTime 423
+scalar scoretable.node[18].veinsmobility minSpeed 0.78043736089021
+scalar scoretable.node[18].veinsmobility maxSpeed 20.593632795289
+scalar scoretable.node[18].veinsmobility totalDistance 990.97274935436
+scalar scoretable.node[18].veinsmobility totalCO2Emission 375.42565117119
+scalar scoretable.node[19].appl generatedWSMs 225
+scalar scoretable.node[19].appl receivedWSMs 427
+scalar scoretable.node[19].appl generatedBSMs 75
+scalar scoretable.node[19].appl receivedBSMs 1066
+scalar scoretable.node[19].appl generatedWSAs 0
+scalar scoretable.node[19].appl receivedWSAs 0
+scalar scoretable.node[19].nic.phy80211p busyTime 0.0030302933333334
+scalar scoretable.node[19].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar scoretable.node[19].nic.mac1609_4 ReceivedBroadcasts 1493
+scalar scoretable.node[19].nic.mac1609_4 SentPackets 300
+scalar scoretable.node[19].nic.mac1609_4 SentAcknowledgements 0
+scalar scoretable.node[19].nic.mac1609_4 RetriesExceeded 0
+scalar scoretable.node[19].nic.mac1609_4 SNIRLostPackets 2034
+scalar scoretable.node[19].nic.mac1609_4 RXTXLostPackets 731
+scalar scoretable.node[19].nic.mac1609_4 TotalLostPackets 2765
+scalar scoretable.node[19].nic.mac1609_4 DroppedPacketsInMac 0
+scalar scoretable.node[19].nic.mac1609_4 TooLittleTime 0
+scalar scoretable.node[19].nic.mac1609_4 TimesIntoBackoff 525
+scalar scoretable.node[19].nic.mac1609_4 SlotsBackoff 451
+scalar scoretable.node[19].nic.mac1609_4 NumInternalContention 0
+scalar scoretable.node[19].nic.mac1609_4 totalBusyTime 0.372338325287
+scalar scoretable.node[19].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar scoretable.node[19].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar scoretable.node[19].nic.mac1609_4 sentPackets:count 300
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar scoretable.node[19].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar scoretable.node[19].nic.mac1609_4 channelBusy:timeavg 0.0016548370012756
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar scoretable.node[19].veinsmobility startTime 198
+scalar scoretable.node[19].veinsmobility totalTime 224
+scalar scoretable.node[19].veinsmobility stopTime 423
+scalar scoretable.node[19].veinsmobility minSpeed 0.47304215775803
+scalar scoretable.node[19].veinsmobility maxSpeed 18.136205261468
+scalar scoretable.node[19].veinsmobility totalDistance 989.47835725747
+scalar scoretable.node[19].veinsmobility totalCO2Emission 354.58306112438
+scalar scoretable.manager roiArea 0
+scalar scoretable.radioMedium.propagation "Arrival computation count" 0
+scalar scoretable.radioMedium "transmission count" 0
+scalar scoretable.radioMedium "signal send count" 0
+scalar scoretable.radioMedium "reception computation count" 0
+scalar scoretable.radioMedium "interference computation count" 0
+scalar scoretable.radioMedium "reception decision computation count" 0
+scalar scoretable.radioMedium "listening decision computation count" 0
+scalar scoretable.radioMedium "reception cache hit" -nan
+attr unit %
+scalar scoretable.radioMedium "interference cache hit" -nan
+attr unit %
+scalar scoretable.radioMedium "noise cache hit" -nan
+attr unit %
+scalar scoretable.radioMedium "snir cache hit" -nan
+attr unit %
+scalar scoretable.radioMedium "reception decision cache hit" -nan
+attr unit %
+scalar scoretable.radioMedium "reception result cache hit" -nan
+attr unit %
+
