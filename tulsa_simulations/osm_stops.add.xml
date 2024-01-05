@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-10-02 15:43:10 by Eclipse SUMO netconvert Version 1.18.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}/data/typemap/osmNetconvert.typ.xml,${SUMO_HOME}/data/typemap/osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <edge_removal>
+        <keep-edges.by-vclass value="passenger,bus,tram,rail_urban,rail"/>
+    </edge_removal>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="10016367930" lane="491986055#0_0" startPos="42.33" endPos="57.33" friendlyPos="true"/>
+    <busStop id="10593073647" lane="311849675#0_0" startPos="16.67" endPos="31.67" friendlyPos="true">
+        <access lane="15048000#0_0" pos="94.97" length="130.41" friendlyPos="1"/>
+        <access lane="15055379#0_0" pos="91.70" length="198.72" friendlyPos="1"/>
+        <access lane="203831707#0_0" pos="0.00" length="61.34" friendlyPos="1"/>
+        <access lane="742057640_0" pos="0.00" length="174.94" friendlyPos="1"/>
+        <access lane="96778010#0_0" pos="71.41" length="181.44" friendlyPos="1"/>
+    </busStop>
+    <busStop id="10791395057" lane="385144569#0_0" startPos="15.74" endPos="30.74" friendlyPos="true"/>
+    <busStop id="10828748939" name="Denver Avenue Station" lane="71183049_0" startPos="8.22" endPos="23.22" friendlyPos="true"/>
+    <busStop id="10828748940" name="Denver Avenue Station" lane="203824161#0_0" startPos="1.80" endPos="16.80" friendlyPos="true">
+        <access lane="203824249_0" pos="68.39" length="27.19" friendlyPos="1"/>
+        <access lane="71183049_0" pos="0.00" length="55.54" friendlyPos="1"/>
+        <access lane="71183050_0" pos="14.36" length="133.19" friendlyPos="1"/>
+        <access lane="71183051_0" pos="46.52" length="130.32" friendlyPos="1"/>
+        <access lane="739467892#0_0" pos="0.00" length="109.55" friendlyPos="1"/>
+    </busStop>
+    <busStop id="10920739344" lane="203831707#0_0" startPos="62.88" endPos="77.88" friendlyPos="true"/>
+    <busStop id="11034513282" lane="103237802#0_0" startPos="1.84" endPos="16.84" friendlyPos="true"/>
+    <busStop id="2975202434" name="Denver Avenue Station" lane="71183049_0" startPos="26.48" endPos="41.48" friendlyPos="true"/>
+    <busStop id="3180044861" lane="730431877_0" startPos="28.09" endPos="43.09" friendlyPos="true">
+        <access lane="-1117509586_0" pos="0.00" length="188.53" friendlyPos="1"/>
+        <access lane="-316001606#6_0" pos="0.00" length="68.41" friendlyPos="1"/>
+        <access lane="-594390223#1_0" pos="170.56" length="171.90" friendlyPos="1"/>
+        <access lane="316001606#2_0" pos="98.40" length="63.74" friendlyPos="1"/>
+        <access lane="594390223#0_0" pos="36.64" length="176.70" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3220005270" name="Denver Avenue Station" lane="203824249_0" startPos="53.39" endPos="68.39" friendlyPos="true"/>
+    <busStop id="3308752863" name="Denver Avenue Station" lane="203824161#0_0" startPos="17.08" endPos="32.08" friendlyPos="true">
+        <access lane="203824249_0" pos="68.39" length="47.84" friendlyPos="1"/>
+        <access lane="390135067_0" pos="0.00" length="116.95" friendlyPos="1"/>
+        <access lane="71183049_0" pos="0.00" length="34.23" friendlyPos="1"/>
+        <access lane="71183052_0" pos="16.17" length="126.95" friendlyPos="1"/>
+        <access lane="739467892#0_0" pos="0.00" length="86.72" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3325858261" name="Denver Avenue Station" lane="203824249_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="3348495001" name="Denver Avenue Station" lane="71183051_0" startPos="31.52" endPos="46.52" friendlyPos="true"/>
+    <busStop id="3348547995" name="Denver Avenue Station" lane="203824249_0" startPos="19.74" endPos="34.74" friendlyPos="true"/>
+    <busStop id="3348548193" name="Denver Avenue Station" lane="71183049_0" startPos="44.01" endPos="59.01" friendlyPos="true"/>
+    <busStop id="3377572693" name="Denver Avenue Station" lane="203824249_0" startPos="37.54" endPos="52.54" friendlyPos="true"/>
+    <busStop id="6965069869" lane="263086070#0_0" startPos="10.52" endPos="25.52" friendlyPos="true"/>
+    <busStop id="8265060283" name="2nd Street South" lane="742057640_0" startPos="62.01" endPos="77.01" friendlyPos="true"/>
+    <busStop id="8265060284" name="1st Street" lane="429706759_0" startPos="17.76" endPos="32.76" friendlyPos="true"/>
+    <busStop id="8265060285" name="6th Street South" lane="107239804#0_0" startPos="31.03" endPos="46.03" friendlyPos="true"/>
+    <busStop id="8265060287" name="11th Street South" lane="315870259#0_0" startPos="80.15" endPos="95.15" friendlyPos="true"/>
+    <busStop id="8265642154" name="6th Street South" lane="315870272_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="8265642155" name="11th Street South" lane="15028810#0_0" startPos="13.81" endPos="28.81" friendlyPos="true"/>
+    <busStop id="8403627791" lane="15044959#1_0" startPos="17.83" endPos="32.83" friendlyPos="true">
+        <access lane="-15048307_0" pos="1612.40" length="65.95" friendlyPos="1"/>
+        <access lane="-349926452_0" pos="0.00" length="48.40" friendlyPos="1"/>
+        <access lane="15048307_0" pos="0.00" length="70.58" friendlyPos="1"/>
+        <access lane="203824075_0" pos="26.00" length="134.11" friendlyPos="1"/>
+        <access lane="349926452_0" pos="93.60" length="52.97" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8403627792" lane="913922833_0" startPos="10.42" endPos="25.42" friendlyPos="true">
+        <access lane="-594390214_0" pos="80.73" length="171.38" friendlyPos="1"/>
+        <access lane="-594390223#1_0" pos="0.00" length="178.08" friendlyPos="1"/>
+        <access lane="1117509585_0" pos="18.40" length="176.18" friendlyPos="1"/>
+        <access lane="203824186_0" pos="40.02" length="185.24" friendlyPos="1"/>
+        <access lane="594390223#0_0" pos="207.23" length="182.69" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8403627793" lane="429708599#0_0" startPos="5.71" endPos="20.71" friendlyPos="true"/>
+    <busStop id="8403627799" lane="15055379#0_0" startPos="27.35" endPos="42.35" friendlyPos="true"/>
+    <busStop id="8403627800" lane="651617604#0_0" startPos="75.62" endPos="90.62" friendlyPos="true">
+        <access lane="-1117509586_0" pos="100.25" length="179.04" friendlyPos="1"/>
+        <access lane="-1117509587_0" pos="19.57" length="171.44" friendlyPos="1"/>
+        <access lane="-316001606#6_0" pos="0.00" length="214.68" friendlyPos="1"/>
+        <access lane="1117509586_0" pos="0.00" length="183.63" friendlyPos="1"/>
+        <access lane="1117509587_0" pos="83.38" length="176.24" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8403627801" lane="349927772_0" startPos="14.66" endPos="29.66" friendlyPos="true">
+        <access lane="-594390214_0" pos="99.06" length="189.21" friendlyPos="1"/>
+        <access lane="-594390223#1_0" pos="38.51" length="171.46" friendlyPos="1"/>
+        <access lane="1117509585_0" pos="0.00" length="193.54" friendlyPos="1"/>
+        <access lane="316001606#2_0" pos="98.40" length="258.84" friendlyPos="1"/>
+        <access lane="594390223#0_0" pos="168.72" length="176.26" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8403627802" lane="913922833_0" startPos="109.56" endPos="124.56" friendlyPos="true">
+        <access lane="14955717_0" pos="0.00" length="78.94" friendlyPos="1"/>
+        <access lane="203824078#0_0" pos="0.00" length="81.72" friendlyPos="1"/>
+        <access lane="203824186_0" pos="0.99" length="48.16" friendlyPos="1"/>
+        <access lane="203824195#0_0" pos="36.29" length="64.18" friendlyPos="1"/>
+        <access lane="305373363#0_0" pos="53.37" length="59.99" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8403989678" lane="98681054#5_0" startPos="6.39" endPos="21.39" friendlyPos="true"/>
+    <busStop id="8403989689" lane="98681054#1_0" startPos="1.33" endPos="16.33" friendlyPos="true"/>
+    <busStop id="8403989690" lane="98681069_0" startPos="23.97" endPos="38.97" friendlyPos="true"/>
+    <busStop id="8403989691" lane="730952024_0" startPos="11.87" endPos="26.87" friendlyPos="true">
+        <access lane="-15045627_0" pos="0.00" length="112.35" friendlyPos="1"/>
+        <access lane="-83521130#0_0" pos="120.58" length="112.41" friendlyPos="1"/>
+        <access lane="15045627_0" pos="126.52" length="107.57" friendlyPos="1"/>
+        <access lane="80030971_0" pos="0.00" length="195.82" friendlyPos="1"/>
+        <access lane="83521130#0_0" pos="0.00" length="107.63" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8403989698" lane="98681069_0" startPos="8.50" endPos="23.50" friendlyPos="true"/>
+    <busStop id="8407068256" lane="349590164#0_0" startPos="18.75" endPos="33.75" friendlyPos="true"/>
+    <busStop id="8407068258" lane="103237811_0" startPos="108.73" endPos="123.73" friendlyPos="true"/>
+    <busStop id="8407070238" lane="429708605#0_0" startPos="98.91" endPos="113.91" friendlyPos="true"/>
+    <busStop id="8407240143" lane="742057635#0_0" startPos="22.78" endPos="37.78" friendlyPos="true"/>
+    <busStop id="8407240145" lane="929419655_0" startPos="133.04" endPos="148.04" friendlyPos="true"/>
+    <busStop id="8407240147" name="1st Street" lane="429706759_0" startPos="56.92" endPos="71.92" friendlyPos="true"/>
+    <busStop id="8407240150" lane="929419652_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="8407240152" lane="929419647_0" startPos="113.47" endPos="128.47" friendlyPos="true"/>
+    <busStop id="8410799968" lane="580270371_0" startPos="20.72" endPos="35.72" friendlyPos="true"/>
+    <busStop id="8410799971" lane="263086064#0_0" startPos="22.23" endPos="37.23" friendlyPos="true"/>
+    <busStop id="8414048718" lane="107642878#0_0" startPos="24.79" endPos="39.79" friendlyPos="true"/>
+    <busStop id="8414048751" lane="107642881#0_0" startPos="13.56" endPos="28.56" friendlyPos="true"/>
+    <busStop id="8419808805" lane="429904701#0_0" startPos="77.53" endPos="92.53" friendlyPos="true"/>
+    <busStop id="8462773734" lane="263275267_0" startPos="9.09" endPos="24.09" friendlyPos="true"/>
+    <busStop id="847428726" name="Denver Avenue Station" lane="71183051_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="847428732" name="Denver Avenue Station" lane="71183051_0" startPos="14.99" endPos="29.99" friendlyPos="true"/>
+    <busStop id="8490586284" lane="651617604#0_0" startPos="30.34" endPos="45.34" friendlyPos="true">
+        <access lane="-1117509587_0" pos="64.86" length="171.14" friendlyPos="1"/>
+        <access lane="-15031998#2_0" pos="0.00" length="190.67" friendlyPos="1"/>
+        <access lane="-15048308#1_0" pos="0.00" length="188.26" friendlyPos="1"/>
+        <access lane="1117509587_0" pos="38.09" length="175.94" friendlyPos="1"/>
+        <access lane="15031998#0_0" pos="142.20" length="186.31" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8505464921" lane="263275263#0_0" startPos="4.92" endPos="19.92" friendlyPos="true"/>
+    <busStop id="8518867279" lane="923613753#0_0" startPos="14.83" endPos="29.83" friendlyPos="true"/>
+    <busStop id="8577315013" lane="263275267_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="8577315817" lane="1103349261_0" startPos="0.44" endPos="15.44" friendlyPos="true"/>
+    <busStop id="8577454172" lane="368987558#0_0" startPos="9.09" endPos="24.09" friendlyPos="true"/>
+    <busStop id="8591538574" lane="15040853#0_0" startPos="21.27" endPos="36.27" friendlyPos="true"/>
+    <busStop id="8591538576" lane="396260450#0_0" startPos="62.24" endPos="77.24" friendlyPos="true"/>
+    <busStop id="8591538578" lane="396260458#0_0" startPos="19.60" endPos="34.60" friendlyPos="true"/>
+    <busStop id="8591538580" lane="481621879#0_0" startPos="17.22" endPos="32.22" friendlyPos="true"/>
+    <busStop id="8591538582" lane="210309605#0_0" startPos="19.47" endPos="34.47" friendlyPos="true"/>
+    <busStop id="8591538584" lane="324128405#0_0" startPos="30.47" endPos="45.47" friendlyPos="true"/>
+    <busStop id="8591538586" lane="263275261#0_0" startPos="22.88" endPos="37.88" friendlyPos="true"/>
+    <busStop id="8591708676" lane="263275262#0_0" startPos="7.76" endPos="22.76" friendlyPos="true"/>
+    <busStop id="8591708678" lane="210309606#0_0" startPos="20.61" endPos="35.61" friendlyPos="true"/>
+    <busStop id="8591708681" lane="368987572#0_0" startPos="22.92" endPos="37.92" friendlyPos="true"/>
+    <busStop id="8591708683" lane="368987574#0_0" startPos="52.73" endPos="67.73" friendlyPos="true"/>
+    <busStop id="8591708685" lane="15040853#0_0" startPos="6.22" endPos="21.22" friendlyPos="true"/>
+    <busStop id="8591708687" lane="316001602#0_0" startPos="28.28" endPos="43.28" friendlyPos="true"/>
+    <busStop id="8591708689" lane="182993819#0_0" startPos="52.16" endPos="67.16" friendlyPos="true">
+        <access lane="-454867808#3_0" pos="0.00" length="130.08" friendlyPos="1"/>
+        <access lane="203824249_0" pos="37.50" length="59.42" friendlyPos="1"/>
+        <access lane="250861729#0_0" pos="211.70" length="130.18" friendlyPos="1"/>
+        <access lane="71183050_0" pos="14.36" length="90.97" friendlyPos="1"/>
+        <access lane="71183051_0" pos="46.52" length="93.35" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8593791554" lane="316001595#0_0" startPos="33.19" endPos="48.19" friendlyPos="true"/>
+    <busStop id="8816031210" lane="481623140_0" startPos="17.61" endPos="32.61" friendlyPos="true"/>
+    <busStop id="8816057224" lane="210309605#0_0" startPos="9.88" endPos="24.88" friendlyPos="true"/>
+    <busStop id="8822972209" lane="193312513#0_0" startPos="294.59" endPos="309.59" friendlyPos="true"/>
+    <busStop id="8822977317" lane="730952025#0_0" startPos="81.77" endPos="96.77" friendlyPos="true">
+        <access lane="-15031998#2_0" pos="0.00" length="14.56" friendlyPos="1"/>
+        <access lane="-327315015#2_0" pos="99.45" length="18.27" friendlyPos="1"/>
+        <access lane="15031998#0_0" pos="142.20" length="11.92" friendlyPos="1"/>
+        <access lane="263275356#0_0" pos="0.00" length="175.97" friendlyPos="1"/>
+        <access lane="327315015#0_0" pos="0.00" length="18.29" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8830426537" lane="327315015#0_0" startPos="18.18" endPos="33.18" friendlyPos="true"/>
+    <busStop id="8830426565" lane="730952024_0" startPos="40.86" endPos="55.86" friendlyPos="true">
+        <access lane="-15045627_0" pos="0.00" length="69.26" friendlyPos="1"/>
+        <access lane="-349866057#1_0" pos="36.08" length="200.21" friendlyPos="1"/>
+        <access lane="-83521130#0_0" pos="120.58" length="69.26" friendlyPos="1"/>
+        <access lane="15045627_0" pos="126.52" length="64.52" friendlyPos="1"/>
+        <access lane="83521130#0_0" pos="0.00" length="64.52" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8830426567" lane="98681054#1_0" startPos="11.86" endPos="26.86" friendlyPos="true"/>
+    <busStop id="8830426569" lane="98681054#3_0" startPos="5.80" endPos="20.80" friendlyPos="true"/>
+    <busStop id="8830426571" lane="327315016_0" startPos="106.83" endPos="121.83" friendlyPos="true"/>
+    <busStop id="8830426573" lane="193312513#0_0" startPos="450.38" endPos="465.38" friendlyPos="true"/>
+    <busStop id="8830426575" lane="193312513#0_0" startPos="85.37" endPos="100.37" friendlyPos="true"/>
+    <busStop id="8831428868" lane="311709968#0_0" startPos="34.93" endPos="49.93" friendlyPos="true"/>
+    <busStop id="8831638026" lane="199923628#0_0" startPos="69.87" endPos="84.87" friendlyPos="true">
+        <access lane="-1116996038_0" pos="0.00" length="44.11" friendlyPos="1"/>
+        <access lane="-316001602#5_0" pos="98.11" length="60.80" friendlyPos="1"/>
+        <access lane="1202674429#0_0" pos="97.49" length="53.47" friendlyPos="1"/>
+        <access lane="203824249_0" pos="68.39" length="158.61" friendlyPos="1"/>
+        <access lane="316001602#0_0" pos="0.00" length="60.82" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8831638031" lane="429706759_0" startPos="129.35" endPos="144.35" friendlyPos="true"/>
+    <busStop id="8833557407" lane="203824175#0_0" startPos="9.62" endPos="24.62" friendlyPos="true">
+        <access lane="-429708599#2_0" pos="0.00" length="207.80" friendlyPos="1"/>
+        <access lane="15055379#0_0" pos="91.70" length="57.16" friendlyPos="1"/>
+        <access lane="203831707#0_0" pos="0.00" length="149.48" friendlyPos="1"/>
+        <access lane="429708599#0_0" pos="46.17" length="226.96" friendlyPos="1"/>
+        <access lane="96778010#0_0" pos="96.04" length="50.61" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8833557409" lane="15048000#0_0" startPos="16.61" endPos="31.61" friendlyPos="true"/>
+    <busStop id="8833557411" lane="258024200#0_0" startPos="21.83" endPos="36.83" friendlyPos="true"/>
+    <busStop id="9160959608" lane="103237790#0_0" startPos="11.16" endPos="26.16" friendlyPos="true"/>
+    <busStop id="9160959613" lane="429694822_0" startPos="96.15" endPos="111.15" friendlyPos="true"/>
+    <busStop id="9161269407" lane="493317142#0_0" startPos="21.06" endPos="36.06" friendlyPos="true"/>
+    <busStop id="9161269416" lane="1117709371_0" startPos="50.33" endPos="65.33" friendlyPos="true"/>
+    <busStop id="9161323519" lane="1117709371_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="9161391172" lane="96778008#0_0" startPos="16.77" endPos="31.77" friendlyPos="true"/>
+    <busStop id="9161667089" lane="396260448#0_0" startPos="69.07" endPos="84.07" friendlyPos="true"/>
+    <busStop id="9161683299" lane="429904686_0" startPos="22.56" endPos="37.56" friendlyPos="true"/>
+    <busStop id="9280798059" lane="289675176_0" startPos="29.92" endPos="44.92" friendlyPos="true"/>
+    <busStop id="9740150838" lane="429904707#0_0" startPos="98.80" endPos="113.80" friendlyPos="true"/>
+    <busStop id="9742026663" lane="244095386#0_0" startPos="7.53" endPos="22.53" friendlyPos="true"/>
+    <busStop id="9780463117" lane="729758553_0" startPos="163.40" endPos="178.40" friendlyPos="true">
+        <access lane="-15048307_0" pos="1455.80" length="131.82" friendlyPos="1"/>
+        <access lane="-15054157#1_0" pos="101.93" length="251.10" friendlyPos="1"/>
+        <access lane="15048307_0" pos="155.56" length="127.02" friendlyPos="1"/>
+        <access lane="15054157#0_0" pos="0.00" length="255.73" friendlyPos="1"/>
+    </busStop>
+    <busStop id="9785738618" lane="327315016_0" startPos="103.62" endPos="118.62" friendlyPos="true"/>
+    <busStop id="9791593330" lane="83521119#6_0" startPos="19.18" endPos="34.18" friendlyPos="true">
+        <access lane="-15053587#0_0" pos="0.00" length="49.65" friendlyPos="1"/>
+        <access lane="-15053587#1_0" pos="123.36" length="49.64" friendlyPos="1"/>
+        <access lane="15047719_0" pos="127.16" length="105.22" friendlyPos="1"/>
+        <access lane="15053587#0_0" pos="127.37" length="54.34" friendlyPos="1"/>
+        <access lane="15053587#1_0" pos="0.00" length="54.33" friendlyPos="1"/>
+    </busStop>
+    <busStop id="9910798495" lane="96778007_0" startPos="20.89" endPos="35.89" friendlyPos="true"/>
+    <busStop id="9910906815" lane="739467893#0_0" startPos="12.16" endPos="27.16" friendlyPos="true"/>
+    <busStop id="9910917821" lane="598075285_0" startPos="49.31" endPos="64.31" friendlyPos="true"/>
+    <busStop id="9910917823" lane="263275268#0_0" startPos="50.11" endPos="65.11" friendlyPos="true"/>
+    <busStop id="9978937024" lane="15050036#0_0" startPos="10.56" endPos="25.56" friendlyPos="true"/>
+    <busStop id="9978937030" lane="349925684#0_0" startPos="87.67" endPos="102.67" friendlyPos="true"/>
+    <busStop id="9978937056" lane="429904701#0_0" startPos="63.75" endPos="78.75" friendlyPos="true"/>
+    <busStop id="9978937058" lane="15049475#0_0" startPos="48.65" endPos="63.65" friendlyPos="true">
+        <access lane="-15050036#3_0" pos="101.91" length="111.23" friendlyPos="1"/>
+        <access lane="-97318422#4_0" pos="102.36" length="74.97" friendlyPos="1"/>
+        <access lane="1116996028_0" pos="0.00" length="70.22" friendlyPos="1"/>
+        <access lane="15050036#0_0" pos="0.00" length="111.21" friendlyPos="1"/>
+        <access lane="349868440#0_0" pos="0.00" length="198.30" friendlyPos="1"/>
+    </busStop>
+    <busStop id="9978937067" lane="203824185#0_0" startPos="42.67" endPos="57.67" friendlyPos="true"/>
+    <busStop id="9978937068" lane="103237802#0_0" startPos="12.70" endPos="27.70" friendlyPos="true"/>
+    <busStop id="9983900380" lane="96659339#0_0" startPos="1.90" endPos="16.90" friendlyPos="true"/>
+</additional>

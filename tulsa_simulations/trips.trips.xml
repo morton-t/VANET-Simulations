@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-10-02 15:43:12.162807 by $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_18_0+0000-03ecfdea036
+<configuration>
+    <net-file value="C:\Users\root\Sumo\2023-10-02-15-43-06\osm.net.xml.gz"/>
+    <ptlines-file value="C:\Users\root\Sumo\2023-10-02-15-43-06\osm_ptlines.xml"/>
+    <ptstops-file value="C:\Users\root\Sumo\2023-10-02-15-43-06\osm_stops.add.xml"/>
+    <output-file value="C:\Users\root\Sumo\2023-10-02-15-43-06\osm_pt.rou.xml"/>
+    <stopinfos-file value="C:\Users\root\Sumo\2023-10-02-15-43-06\stopinfos.xml"/>
+    <routes-file value="C:\Users\root\Sumo\2023-10-02-15-43-06\vehroutes.xml"/>
+    <trips-file value="C:\Users\root\Sumo\2023-10-02-15-43-06\trips.trips.xml"/>
+    <min-stops value="0"/>
+    <extend-to-fringe value="True"/>
+    <random-begin value="True"/>
+    <seed value="42"/>
+    <ignore-errors value="True"/>
+    <vtype-prefix value="pt_"/>
+    <verbose value="True"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_tram" vClass="tram" speedFactor="1.0"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="rail_urban"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail_urban"/>
+    <vType id="pt_trolleybus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_minibus" vClass="bus" speedFactor="0.95"/>
+    <vType id="pt_share_taxi" vClass="taxi" speedFactor="0.95"/>
+    <vType id="pt_aerialway" vClass="rail_urban" length="2.5" width="2" personCapacity="4"/>
+    <vType id="pt_ferry" vClass="ship"/>
+</routes>
