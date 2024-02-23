@@ -43,6 +43,9 @@ void VeinsApp::initialize(int stage)
     // ~~~~~~ ADD SELF TO SCORE TABLE ~~~~~~~~~~~~
     //TODO: Move to own method!
 
+
+    roadSpeedLimit = 25; //FIXME: This needs to become a dynamic value; currently a temporary for proof of concept
+
     //Retrieve relevant self data
     Coord coords = mobility->getPositionAt(omnetpp::simTime());
 
@@ -62,8 +65,6 @@ void VeinsApp::finish()
 {
     //NOTE: This will be called before the ScoreTable destructor so it is possible to convey
     // the table information to output in this method before the vehicle is destructed.
-
-
     std::cout << "\n\t" << mobility->getExternalId() << "'s score table:" << std::endl;
     st.printScoreTable();
 
@@ -101,10 +102,13 @@ void VeinsApp::onWSM(BaseFrame1609_4* msg)
     }
     // Handle responses to challenge messages
     else if (messageType == "ChallengeResponse") {
-        ResponsePacket* wsm = check_and_cast<ResponsePacket*>(msg);
-        // Check if message is intended for recipient before processing the message
-        if (wsm->getRecipient() == vehID) {
-            handleResponse(wsm);
+        {
+            ResponsePacket* response = check_and_cast<ResponsePacket*>(msg);
+            // Check if message is intended for recipient before processing the message
+            if (response->getRecipient() == vehID) {
+                handleResponse(response);
+
+            }
         }
     }
     else {
@@ -123,6 +127,10 @@ void VeinsApp::handleSelfMsg(cMessage* msg)
     /*
      * Handles messages the vehicle sends to itself for status updates
      */
+
+    // Set speed limit condition for road
+    st.setRoadSpeedLimit(roadSpeedLimit);
+
 
     //Retrieve vehicle's own information on self message
     Coord coords = mobility->getPositionAt(omnetpp::simTime());
@@ -188,8 +196,6 @@ void VeinsApp::handleBroadcast(Broadcast* wsm) {
      * Processes incoming WSMs from other vehicles and implements trust table & trust score logic
      */
 
-    int ROAD_SPEED_LIMIT_TEMP = 25; //FIXME: This needs to become a dynamic value; currently a temporary for proof of concept
-
     // Get receiver's speed
     std::string vehSpeed = std::to_string(traciVehicle->getSpeed());
 
@@ -217,7 +223,7 @@ void VeinsApp::handleBroadcast(Broadcast* wsm) {
     }
 
     //Update trust score and add to score table
-    incomingVehTableData = st.setTrustScore(incomingVehTableData, vehSpeed, ROAD_SPEED_LIMIT_TEMP, trustModifier);
+    incomingVehTableData = st.setTrustScore(incomingVehTableData, vehSpeed, roadSpeedLimit, trustModifier);
     st.setScoreTable(incomingVehTableData);
 
     // Iterate through suspected ghosts and create challenge packets for all vehicles present
@@ -253,9 +259,10 @@ void VeinsApp::handleChallenge(ChallengePacket* wsm) {
 
     // If the recipient is a ghost, set response to -1
     if (vehType == "ghost") {
-        return;                                     //TODO: For some reason, not sending a response from a ghost results in better precision
+
+                                    //TODO: For some reason, not sending a response from a ghost results in better precision
                                                     //      Need to investigate the cause of the anomaly
-        // response->setChallengeResponse(-1);
+        response->setChallengeResponse(-1);
     }
     // If the recipient is not a ghost, we answer the challenge correctly
     else {
@@ -271,24 +278,24 @@ void VeinsApp::handleResponse(ResponsePacket* wsm) {
     /*
      * Processes incoming response packets from other vehicles with message type "ChallengeResponse"
      */
+    {
+        std::string sender = wsm->getSender();
+        int senderResponse = wsm->getChallengeResponse();
 
-    std::string sender = wsm->getSender();
-    int senderResponse = wsm->getChallengeResponse();
+        // Check if suspected ghost responded with the correct challenge number
+        if (st.suspectedGhosts[sender] == senderResponse) {
+            // Response is correct - increment the trust score for the suspected ghost
+            st.incrementVehTrustScore(sender);
+            st.confirmGhost(sender, "passenger");
+        }
+        else {
+            // Response is incorrect - vehicle is confirmed as a ghost
 
-    // Check if suspected ghost responded with the correct challenge number
-    if (st.suspectedGhosts[sender] == senderResponse) {
-        // Response is correct - increment the trust score for the suspected ghost
-        st.incrementVehTrustScore(sender);
-        st.confirmGhost(sender, "passenger");
-    }
-    else {
-        // Response is incorrect - vehicle is confirmed as a ghost
-
-        // Add vehicle to reporting unordered sets
-        st.confirmedGhosts.insert(sender);
-        st.unreportedGhosts.insert(sender);
-        st.confirmGhost(sender, "ghost");
-
+            // Add vehicle to reporting unordered sets
+            st.confirmedGhosts.insert(sender);
+            st.unreportedGhosts.insert(sender);
+            st.confirmGhost(sender, "ghost");
+        }
         //TODO: This is not a secure approach to validation! Need to implement public key exchange in practice.
     }
 }
@@ -314,20 +321,20 @@ void VeinsApp::createChallenge(std::string recipient) {
     }
 
     //Generate challenge packet
-    ChallengePacket* wsm = new ChallengePacket();
+    ChallengePacket* challenge = new ChallengePacket();
 
     // Set message data
-    wsm->setMessageType("Challenge");
-    wsm->setSender(vehID.c_str());
-    wsm->setRecipient(recipient.c_str());
+    challenge->setMessageType("Challenge");
+    challenge->setSender(vehID.c_str());
+    challenge->setRecipient(recipient.c_str());
 
     // Assign a random number for a challenge number
-    wsm->setChallengeNumber(rand);
+    challenge->setChallengeNumber(rand);
 
     // Update suspected ghosts hash table with the last sent random number for the given vehicle
     st.suspectedGhosts.insert({recipient, rand});
 
-    // Send wsm with above data
-    populateWSM(wsm);
-    sendDown(wsm);
+    // Send challenge with above data
+    populateWSM(challenge);
+    sendDown(challenge);
 }

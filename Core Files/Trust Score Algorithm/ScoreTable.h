@@ -22,7 +22,7 @@ static const int MAX_TABLE_ENTRIES = 1000;
 static const int VARIANCE_THRESHOLD = 2;
 static const int MIN_TRUST_THRESHOLD = -5;
 static const int MAX_TRUST_THRESHOLD = 5;
-static const int TRUST_DIFFERENCE_CUTOFF = 3;
+static const int TRUST_DIFFERENCE_CUTOFF = 2;
 static const double SPEED_THRESHOLD = 5.0;
 
 // Indexing values for scoretable rows
@@ -57,6 +57,7 @@ public:
     int numTableEntries;
     double tableSpeedVariance;
     double tableSpeedAverage;
+    int roadSpeedLimit;
 
     std::string ownerVehType; //TODO: Remove this & accessor/mutator if not needed
 
@@ -92,6 +93,8 @@ public:
 
     void incrementVehTrustScore(std::string vehID);
     void confirmGhost(std::string vehID, std::string vehType);
+
+    void setRoadSpeedLimit(int limit);
 
 protected:
 };

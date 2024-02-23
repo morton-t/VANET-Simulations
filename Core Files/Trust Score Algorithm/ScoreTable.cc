@@ -148,24 +148,31 @@ std::array<std::string, DATAPOINTS_PER_ROW> ScoreTable::setTrustScore(std::array
     int incomingTrustScore = std::stoi(incomingVehTableData[VEH_TRUSTSCORE_INDEX]) + TRUST_MODIFIER;
 
     //If the vehicle is below trust threshold, do attempt to update its trust information
-    if (incomingTrustScore <= MIN_TRUST_THRESHOLD) {
-        return incomingVehTableData;
-    }
+//    if (incomingTrustScore <= MIN_TRUST_THRESHOLD) {
+//        return incomingVehTableData;
+//    }
 
     // BEGIN ALGORITHM 1 LOGIC
 
-    // If we have confirmed the vehicle as non-malicious, set its trust score to the table average
+    // If we have confirmed the vehicle as non-malicious, set its trust score to the table average  if it was less trusted than avg
     if (incomingVehTableData[VEH_CONFIRMED_TYPE] == "passenger") {
-        incomingTrustScore = (int)round(getTableTrustAverage());
+        int avgTrust = (int)round(getTableTrustAverage());
+        if (incomingTrustScore < avgTrust){
+            incomingTrustScore = avgTrust;
+        }
+        //incomingTrustScore = MAX_TRUST_THRESHOLD;
     }
-    // Otherwise, continue polling to update trust information by check messaging vehicle's speed against speed threshold
-    else if (std::abs(incomingVehSpeed - getTableSpeedAverage()) > SPEED_THRESHOLD) {  //THIS IS THE BEST RESULT WITH: min = -5, max = 5, thresh = 5
+    else if (incomingVehTableData[VEH_CONFIRMED_TYPE] == "ghost") {
+        incomingVehTableData[VEH_PREDICT_INDEX] = "ghost";
+    }
+    // Poll to update trust information by check messaging vehicle's speed against speed threshold
+    if (incomingVehSpeed > roadSpeedLimit * 1.2 || incomingVehSpeed < roadSpeedLimit * .8/*std::abs(incomingVehSpeed - getTableSpeedAverage()) > roadSpeedLimit * 0.2*/) {  //THIS IS THE BEST RESULT WITH: min = -5, max = 5, thresh = 5
         // Conduct hypothesis test and decrement trust score if true
-        if (tHypothesisTest(incomingVehSpeed) == true) {
+        if (tHypothesisTest(incomingVehSpeed) == true && incomingTrustScore > MIN_TRUST_THRESHOLD) {
             incomingTrustScore -= 1;
         }
         else if (incomingTrustScore < MAX_TRUST_THRESHOLD) {
-            incomingTrustScore += 1;
+            //incomingTrustScore += 1;
         }
     }
     // If vehicle speed is within average speed, increment trust score
@@ -178,10 +185,14 @@ std::array<std::string, DATAPOINTS_PER_ROW> ScoreTable::setTrustScore(std::array
     // Check the incoming vehicle's trust score against the other trust scores in the table
     if (getTableTrustAverage() - incomingTrustScore >= TRUST_DIFFERENCE_CUTOFF) {
         // Flag vehicle as ghost and update classification timestamps
-        incomingVehTableData[VEH_PREDICT_INDEX] = "ghost";
-        incomingVehTableData[VEH_CLASSIFIED_TIME] = incomingVehTableData[VEH_TIMESTAMP_INDEX];
-        incomingVehTableData[VEH_DETECTION_EPOCHS] = std::to_string(std::stoi(incomingVehTableData[VEH_CLASSIFIED_TIME]) - std::stoi(incomingVehTableData[VEH_ENCOUNTER_TIME]));
+        if (incomingVehTableData[VEH_CONFIRMED_TYPE] != "passenger") {
+            incomingVehTableData[VEH_PREDICT_INDEX] = "ghost";
+            if (incomingVehTableData[VEH_CLASSIFIED_TIME] == "null") {
+                incomingVehTableData[VEH_CLASSIFIED_TIME] = incomingVehTableData[VEH_TIMESTAMP_INDEX];
+                incomingVehTableData[VEH_DETECTION_EPOCHS] = std::to_string(std::stoi(incomingVehTableData[VEH_CLASSIFIED_TIME]) - std::stoi(incomingVehTableData[VEH_ENCOUNTER_TIME]));
 
+            }
+        }
         // Upkeep unordered map with suspected vehicle and a default control challenge packet value
         suspectedGhosts[incomingVehTableData[VEH_ID_INDEX]] = 0;
     }
@@ -254,7 +265,7 @@ void ScoreTable::setTableStats() {
         if (vehActual == "attacker") {
             vehActual = "passenger"; // An attacker is always a physical passenger vehicle
         }
-        else if (vehPredict == "self") {
+        if (vehPredict == "self") {
             vehPredict = vehActual; // A vehicle can always correctly identify itself
         }
 
@@ -424,8 +435,14 @@ void ScoreTable::incrementVehTrustScore(std::string vehID) {
                 scoreTable[i][VEH_TRUSTSCORE_INDEX] = std::to_string(trustScore);
             }
 
-            // Update ghost flag in table using conditions defined in setTrustScore()
-            if (scoreTable[i][VEH_PREDICT_INDEX] == "ghost" && (getTableTrustAverage() - trustScore) < TRUST_DIFFERENCE_CUTOFF) {
+            // Veh was confirmed as a passenger by directional message
+            if (scoreTable[i][VEH_CONFIRMED_TYPE] == "passenger") {
+                scoreTable[i][VEH_PREDICT_INDEX] = "passenger";
+                scoreTable[i][VEH_CLASSIFIED_TIME] = "null";
+                scoreTable[i][VEH_DETECTION_EPOCHS] = "null";
+            }
+            // Veh not confirmed as passenger by message, but veh exhibits trustworthy behavior
+            else if (scoreTable[i][VEH_PREDICT_INDEX] == "ghost" && (getTableTrustAverage() - trustScore) < TRUST_DIFFERENCE_CUTOFF) {
                 scoreTable[i][VEH_PREDICT_INDEX] = "passenger";
                 scoreTable[i][VEH_CLASSIFIED_TIME] = "null";
                 scoreTable[i][VEH_DETECTION_EPOCHS] = "null";
@@ -441,8 +458,13 @@ void ScoreTable::incrementVehTrustScore(std::string vehID) {
 void ScoreTable::confirmGhost(std::string vehID, std::string vehType) {
     for (int i = 0; i < numTableEntries; ++i) {
         if (scoreTable[i][VEH_ID_INDEX] == vehID) {
+            scoreTable[i][VEH_PREDICT_INDEX] = vehType;
             scoreTable[i][VEH_CONFIRMED_TYPE] = vehType;
             return;
         }
     }
+}
+
+void ScoreTable::setRoadSpeedLimit(int limit) {
+    roadSpeedLimit = limit;
 }

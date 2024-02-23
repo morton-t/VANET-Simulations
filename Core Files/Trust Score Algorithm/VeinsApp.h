@@ -61,7 +61,7 @@ public:
     ScoreTable st; /** Score Table containing traffic data */
 
     bool init; /** On init, vehicles report speed, coords, etc. which results in inaccurate table info. Ensures vehs are moving before reporting data */
-
+    int roadSpeedLimit;
 
 protected:
     std::string vehID;
