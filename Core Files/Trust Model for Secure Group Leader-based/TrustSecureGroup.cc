@@ -66,7 +66,7 @@ void TrustSecureGroup::pruneNeighborTable(double timestamp) {
     /*
      * Iterates through neighboringVehicles table and removes expired entries
      */
-return; //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//return; //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     for (auto it = neighboringVehicles.begin(); it != neighboringVehicles.end();) {
         if (timestamp > (std::stod(it->second[VEH_TIMESTAMP_INDEX]) + PRUNE_THRESHOLD)) {
@@ -76,9 +76,9 @@ return; //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 groupLeaders[currentGroup].second = getHighestTotalTrust();
             }
             // Purge missing GL from group and report to BGL instead -- GLs should not purge themselves
-            else if (!isGroupLeader && groupLeaders[currentGroup].first == it->first) {
+            else if (isBackupGroupLeader && groupLeaders[currentGroup].first == it->first) {
                 groupLeaders[currentGroup].first = groupLeaders[currentGroup].second;
-                groupLeaders[currentGroup].second = "null";
+                groupLeaders[currentGroup].second = getHighestTotalTrust();
 
                 // If bgl, change flags
                 if (isBackupGroupLeader) {
