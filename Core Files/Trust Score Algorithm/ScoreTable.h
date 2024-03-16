@@ -22,8 +22,11 @@ static const int MAX_TABLE_ENTRIES = 1000;
 static const int VARIANCE_THRESHOLD = 2;
 static const int MIN_TRUST_THRESHOLD = -5;
 static const int MAX_TRUST_THRESHOLD = 5;
-static const int TRUST_DIFFERENCE_CUTOFF = 2;
+static const double TRUST_DIFFERENCE_CUTOFF = 2;
 static const double SPEED_THRESHOLD = 5.0;
+
+const double ALPHA = 0.01;          /** Hypothesis Test Alpha */
+static const double DELTA = 0.4;    /** Speed variance Delta */
 
 // Indexing values for scoretable rows
 static const int VEH_ID_INDEX = 0;

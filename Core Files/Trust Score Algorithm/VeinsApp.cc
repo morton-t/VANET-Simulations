@@ -44,7 +44,7 @@ void VeinsApp::initialize(int stage)
     //TODO: Move to own method!
 
 
-    roadSpeedLimit = 25; //FIXME: This needs to become a dynamic value; currently a temporary for proof of concept
+    roadSpeedLimit = 15; //FIXME: This needs to become a dynamic value; currently a temporary for proof of concept
 
     //Retrieve relevant self data
     Coord coords = mobility->getPositionAt(omnetpp::simTime());
@@ -142,7 +142,7 @@ void VeinsApp::handleSelfMsg(cMessage* msg)
 
 
     // Update table data & impute table's average trust score for self
-    std::array<std::string, DATAPOINTS_PER_ROW> newEntry = {vehID, vehCoords, vehSpeed, timestamp, vehType, "self", std::to_string((int)round(st.getTableTrustAverage())), "0", "null", "null", "null"};
+    std::array<std::string, DATAPOINTS_PER_ROW> newEntry = {vehID, vehCoords, vehSpeed, timestamp, vehType, "self", std::to_string(st.getTableTrustAverage()), "0", "null", "null", "null"};
     st.setScoreTable(newEntry);
 
     DemoBaseApplLayer::handleSelfMsg(msg);
@@ -213,7 +213,7 @@ void VeinsApp::handleBroadcast(Broadcast* wsm) {
 
     // Create new table entry
     if (incomingVehTableData[0] == "null") {
-        incomingVehTableData = {incomingVehID, incomingVehCoords, incomingVehSpeed, incomingTimeStamp, incomingVehType, "passenger", std::to_string(0 + trustModifier), incomingTimeStamp, "null", "null", "null"};
+        incomingVehTableData = {incomingVehID, incomingVehCoords, incomingVehSpeed, incomingTimeStamp, incomingVehType, "passenger", std::to_string(st.getTableTrustAverage()), incomingTimeStamp, "null", "null", "null"};
     }
     // Update dynamically reported values for existing vehicle entry
     else {

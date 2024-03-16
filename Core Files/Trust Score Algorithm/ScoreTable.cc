@@ -145,7 +145,7 @@ std::array<std::string, DATAPOINTS_PER_ROW> ScoreTable::setTrustScore(std::array
      */
 
     double incomingVehSpeed = std::stod(incomingVehTableData[VEH_SPEED_INDEX]);
-    int incomingTrustScore = std::stoi(incomingVehTableData[VEH_TRUSTSCORE_INDEX]) + TRUST_MODIFIER;
+    double incomingTrustScore = std::stod(incomingVehTableData[VEH_TRUSTSCORE_INDEX]) + TRUST_MODIFIER;
 
     //If the vehicle is below trust threshold, do attempt to update its trust information
 //    if (incomingTrustScore <= MIN_TRUST_THRESHOLD) {
@@ -156,7 +156,7 @@ std::array<std::string, DATAPOINTS_PER_ROW> ScoreTable::setTrustScore(std::array
 
     // If we have confirmed the vehicle as non-malicious, set its trust score to the table average  if it was less trusted than avg
     if (incomingVehTableData[VEH_CONFIRMED_TYPE] == "passenger") {
-        int avgTrust = (int)round(getTableTrustAverage());
+        double avgTrust = getTableTrustAverage();
         if (incomingTrustScore < avgTrust){
             incomingTrustScore = avgTrust;
         }
@@ -166,10 +166,10 @@ std::array<std::string, DATAPOINTS_PER_ROW> ScoreTable::setTrustScore(std::array
         incomingVehTableData[VEH_PREDICT_INDEX] = "ghost";
     }
     // Poll to update trust information by check messaging vehicle's speed against speed threshold
-    if (incomingVehSpeed > roadSpeedLimit * 1.2 || incomingVehSpeed < roadSpeedLimit * .8/*std::abs(incomingVehSpeed - getTableSpeedAverage()) > roadSpeedLimit * 0.2*/) {  //THIS IS THE BEST RESULT WITH: min = -5, max = 5, thresh = 5
+    if (incomingVehSpeed > roadSpeedLimit * (1 + DELTA) || incomingVehSpeed < roadSpeedLimit * (1 - DELTA)/*std::abs(incomingVehSpeed - getTableSpeedAverage()) > roadSpeedLimit * 0.2*/) {  //THIS IS THE BEST RESULT WITH: min = -5, max = 5, thresh = 5
         // Conduct hypothesis test and decrement trust score if true
         if (tHypothesisTest(incomingVehSpeed) == true && incomingTrustScore > MIN_TRUST_THRESHOLD) {
-            incomingTrustScore -= 1;
+            incomingTrustScore -= (1 - (incomingTrustScore / 10)); // Gives trust score as a percentile modifier
         }
         else if (incomingTrustScore < MAX_TRUST_THRESHOLD) {
             //incomingTrustScore += 1;
@@ -178,12 +178,15 @@ std::array<std::string, DATAPOINTS_PER_ROW> ScoreTable::setTrustScore(std::array
     // If vehicle speed is within average speed, increment trust score
     else {
         if (incomingTrustScore < MAX_TRUST_THRESHOLD) {
-            incomingTrustScore += 1;
+            incomingTrustScore += (1 + (incomingTrustScore / 10)); //Gives trust score as a percentile modifier
         }
     }
 
     // Check the incoming vehicle's trust score against the other trust scores in the table
-    if (getTableTrustAverage() - incomingTrustScore >= TRUST_DIFFERENCE_CUTOFF) {
+    double avg = getTableTrustAverage();
+    double someDelta = 0.25;
+    //if (getTableTrustAverage() - incomingTrustScore >= TRUST_DIFFERENCE_CUTOFF) {
+    if (avg - incomingTrustScore >= abs(avg * someDelta)) {
         // Flag vehicle as ghost and update classification timestamps
         if (incomingVehTableData[VEH_CONFIRMED_TYPE] != "passenger") {
             incomingVehTableData[VEH_PREDICT_INDEX] = "ghost";
@@ -195,6 +198,14 @@ std::array<std::string, DATAPOINTS_PER_ROW> ScoreTable::setTrustScore(std::array
         }
         // Upkeep unordered map with suspected vehicle and a default control challenge packet value
         suspectedGhosts[incomingVehTableData[VEH_ID_INDEX]] = 0;
+    }
+    // Vehicle has exhibited trustworthy behavior, was a ghost, and is not confirmed as a ghost
+    else {
+        if (incomingVehTableData[VEH_PREDICT_INDEX] == "ghost" && incomingVehTableData[VEH_CONFIRMED_TYPE] != "ghost") {
+            incomingVehTableData[VEH_PREDICT_INDEX] = "passenger";
+            incomingVehTableData[VEH_CLASSIFIED_TIME] = "null";
+            incomingVehTableData[VEH_DETECTION_EPOCHS] = "null";
+        }
     }
 
     //Update and return new table entry
@@ -388,26 +399,30 @@ bool ScoreTable::tHypothesisTest(double incomingVehSpeed) {
     /*
      * Conducts a two-tailed hypothesis test to determine if reported incoming speed
      * runs contradictory to the average speed reported within the score table
+     *
+     * H_0 : The vehicle is legitimate
+     * H_a : The vehicle is a Sybil node
      */
 
-    const double ALPHA = 0.05;
     double degreesOfFreedom = numTableEntries;
-    double allTableSpeeds[numTableEntries];
+//    double allTableSpeeds[numTableEntries];       What the hell was I thinking when I wrote this? It's not needed.
 
     if (numTableEntries < 1) return false;  // No entries in table for testing
 
-    for (int i = 0; i < numTableEntries; ++i) {
-        allTableSpeeds[i] = std::stod(scoreTable[i][VEH_SPEED_INDEX]);
-    }
+//    for (int i = 0; i < numTableEntries; ++i) {   What the hell was I thinking when I wrote this? It's not needed.
+//        allTableSpeeds[i] = std::stod(scoreTable[i][VEH_SPEED_INDEX]);
+//    }
 
     double t = (getTableSpeedAverage() - incomingVehSpeed) * std::sqrt(numTableEntries) / getTableSpeedVariance();
 
     double criticalValue = gsl_cdf_tdist_Pinv(ALPHA / 2, degreesOfFreedom);
 
     if (t >= criticalValue || t <= -criticalValue) {
+        // Reject H_0
         return true;
     }
 
+    // Accept H_0
     return false;
 }
 
@@ -427,11 +442,11 @@ void ScoreTable::incrementVehTrustScore(std::string vehID) {
     for (int i = 0; i < numTableEntries; ++i) {
         // Locate vehicle in table
         if (scoreTable[i][VEH_ID_INDEX] == vehID) {
-            int trustScore = std::stoi(scoreTable[i][VEH_TRUSTSCORE_INDEX]);
+            double trustScore = std::stod(scoreTable[i][VEH_TRUSTSCORE_INDEX]);
 
             //Increment trust score and update table
             if (trustScore < MAX_TRUST_THRESHOLD){
-                trustScore++;
+                trustScore += 1;
                 scoreTable[i][VEH_TRUSTSCORE_INDEX] = std::to_string(trustScore);
             }
 
