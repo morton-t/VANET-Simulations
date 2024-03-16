@@ -173,8 +173,15 @@ void HostBased::startAttackDetection(std::string incomingVehSpeed, std::string i
     // For each message received - update density and average table speed & calculate flow -- methods' accessor updates values on call; calling getNodeFlow() calls getTableSpeedAverage() & getNodeDensity()
     getNodeFlow();
 
+    /****/
+    // We calculate the flow threshold as within 1 std dev of the observed average flow? None given in article, this is an assumption..
+    double flow_th = sqrt(getTableFlowVariance());
+    /****/
+
+
     // Check flow from message vs incoming flow calculation
-    if (std::stod(incomingVehFlow) - nodeFlow < FLOW_THRESHOLD) {      //FIXME: No logical value for flow_threshold implemented. Using 1.0 for the moment
+    //if (std::stod(incomingVehFlow) - nodeFlow < FLOW_THRESHOLD) {      //FIXME: No logical value for flow_threshold implemented. Using 100.0 for the moment
+    if (std::stod(incomingVehFlow) - nodeFlow < flow_th) {
         // Accept - update table data
 
         // If table data does not exist, create a new table entry
